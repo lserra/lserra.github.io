@@ -92,3 +92,11 @@ def gh_pages():
     """Publish to GitHub Pages"""
     rebuild()
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+
+def deploy():
+    """Push to GitHub Pages"""
+    env.msg = 'Build site'
+    clean()
+    preview()
+    local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
+    local("git push origin {github_pages_branch}".format(**env))

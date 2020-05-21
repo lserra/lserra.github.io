@@ -22,11 +22,3 @@ DELETE_OUTPUT_DIRECTORY = True
 
 # DISQUS_SITENAME = ""
 # GOOGLE_ANALYTICS = ""
-
-def deploy():
-    """Push to GitHub Pages"""
-    env.msg = 'Build site'
-    clean()
-    preview()
-    local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
-    local("git push origin {github_pages_branch}".format(**env))
