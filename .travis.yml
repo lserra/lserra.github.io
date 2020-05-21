@@ -12,4 +12,4 @@ install:
   - git config --global user.name "lserra"
   - git clone https://github.com/getpelican/pelican-plugins
 script:
-  - fab publish("Build Site")
+  - fab gh_pages
