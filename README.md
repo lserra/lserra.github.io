@@ -9,7 +9,8 @@ Stay in touch with us too.
 Register in our site and receive our feeds.
 
 ## A professional and personal blog
-[Build Status](https://travis-ci.org/ayushkumarshah/ayushkumarshah.github.io.svg?branch=source)
+[![Build Status](https://travis-ci.org/lserra/lserra.github.io.svg?branch=source)](https://travis-ci.org/lserra/lserra.github.io)
+
 
 This repository hosts the code for my [blog](https://lserra.github.io/).
 
@@ -79,11 +80,11 @@ If you're interested in writing a blog post for the website, you need to:
 - Push the changes to a topic branch, like `an-example-article`, on *your* fork of the repository
 - Make a [pull request](https://help.github.com/articles/using-pull-requests/) against the `source` branch
 
-## Hosting
+### Hosting
 
 This blog is hosted by [GitHub Pages](https://pages.github.com/). Also, I'm using continuous integration with [Travis](https://travis-ci.org) builds the site everytime the source is updated.
 
-## License
+### License
 
 The source code for generation of the blog is under [MIT License](https://github.com/ayushkumarshah/ayushkumarshah.github.io/blob/source/LICENSE.md). Content is copyrighted.
 
