@@ -4,91 +4,91 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://lserra.github.io/</loc>
-<lastmod>2020-05-21T19:36:09-00:00</lastmod>
+<loc>/</loc>
+<lastmod>2020-05-21T19:39:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/tags.html</loc>
-<lastmod>2020-05-21T19:36:09-00:00</lastmod>
+<loc>/tags.html</loc>
+<lastmod>2020-05-21T19:39:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/categories.html</loc>
-<lastmod>2020-05-21T19:36:09-00:00</lastmod>
+<loc>/categories.html</loc>
+<lastmod>2020-05-21T19:39:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/authors.html</loc>
-<lastmod>2020-05-21T19:36:09-00:00</lastmod>
+<loc>/authors.html</loc>
+<lastmod>2020-05-21T19:39:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/archives.html</loc>
-<lastmod>2020-05-21T19:36:09-00:00</lastmod>
+<loc>/archives.html</loc>
+<lastmod>2020-05-21T19:39:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/about-me/</loc>
+<loc>/about-me/</loc>
 <lastmod>2020-05-17T00:00:00-03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/2020/05/first-article/</loc>
+<loc>/2020/05/first-article/</loc>
 <lastmod>2020-05-17T00:00:00-03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/category/code.html</loc>
+<loc>/category/code.html</loc>
 <lastmod>2020-05-17T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/tag/static.html</loc>
+<loc>/tag/static.html</loc>
 <lastmod>2020-05-17T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/tag/site.html</loc>
+<loc>/tag/site.html</loc>
 <lastmod>2020-05-17T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/tag/pelican.html</loc>
+<loc>/tag/pelican.html</loc>
 <lastmod>2020-05-17T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/tag/markdown.html</loc>
+<loc>/tag/markdown.html</loc>
 <lastmod>2020-05-17T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://lserra.github.io/author/laercio-serra.html</loc>
+<loc>/author/laercio-serra.html</loc>
 <lastmod>2020-05-17T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>

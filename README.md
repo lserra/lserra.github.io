@@ -1,4 +1,5 @@
 # Good Combination
+[![Build Status](https://travis-ci.org/lserra/lserra.github.io.svg?branch=source)](https://travis-ci.org/lserra/lserra.github.io)
 
 good_combination = { m, d, c }
 
@@ -9,8 +10,6 @@ Stay in touch with us too.
 Register in our site and receive our feeds.
 
 ## A professional and personal blog
-[![Build Status](https://travis-ci.org/lserra/lserra.github.io.svg?branch=source)](https://travis-ci.org/lserra/lserra.github.io)
-
 
 This repository hosts the code for my [blog](https://lserra.github.io/).
 
