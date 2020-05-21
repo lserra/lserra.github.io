@@ -71,8 +71,8 @@ FEED_USE_SUMMARY = True
 MAIN_MENU = True
 
 LINKS = (
-    ('ideas and thoughts', 'http://localhost:8000/'),
-    ('portfolio', 'http://localhost:8000/'),
+    ('ideas and thoughts', 'https://lserra.github.io/'),
+    ('portfolio', 'https://lserra.github.io/'),
 )
 
 SOCIAL = (

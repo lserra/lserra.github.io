@@ -9,12 +9,11 @@ Stay in touch with us too.
 Register in our site and receive our feeds.
 
 ## A professional and personal blog
-[![Build Status](https://travis-ci.org/ayushkumarshah/ayushkumarshah.github.io.svg?branch=source)]
-(https://travis-ci.org/ayushkumarshah/ayushkumarshah.github.io)
+[Build Status](https://travis-ci.org/ayushkumarshah/ayushkumarshah.github.io.svg?branch=source)
 
-This repository hosts the code for my [blog]().
+This repository hosts the code for my [blog](https://lserra.github.io/).
 
-The website is powered by [Pelican](http://getpelican.com/) — a static site generator written in Python — and uses a theme based on [Flex]().
+The website is powered by [Pelican](http://getpelican.com/) — a static site generator written in Python — and uses a theme based on [Flex](https://github.com/alexandrevicenzi/Flex.git).
 
 ### Build locally
 
