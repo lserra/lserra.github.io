@@ -88,9 +88,9 @@ def cf_upload():
 #         extra_opts='-c',
 #     )
 
-def publish(commit_message):
+def publish():
     """Automatic deploy to GitHub Pages"""
-    env.msg = commit_message
+    env.msg = "build site"
     env.GH_TOKEN = os.getenv('GH_TOKEN')
     env.TRAVIS_REPO_SLUG = os.getenv('TRAVIS_REPO_SLUG')
     clean()
