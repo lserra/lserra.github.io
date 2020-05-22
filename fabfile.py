@@ -69,6 +69,25 @@ def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
 
+def publish():
+    """Automatic deploy to GitHub Pages"""
+    env.msg = "build site"
+    env.GH_TOKEN = os.getenv('GH_TOKEN')
+    env.TRAVIS_REPO_SLUG = os.getenv('TRAVIS_REPO_SLUG')
+    clean()
+    local('pelican -s publishconf.py')
+    with hide('running', 'stdout', 'stderr'):
+        local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
+        local("git push -fq https://{GH_TOKEN}@github.com/{TRAVIS_REPO_SLUG}.git {github_pages_branch}".format(**env))
+
+def deploy():
+    """Push to GitHub Pages"""
+    env.msg = 'Build site'
+    clean()
+    preview()
+    local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
+    local("git push origin {github_pages_branch}".format(**env))
+
 # def cf_upload():
 #     """Publish to Rackspace Cloud Files"""
 #     rebuild()
@@ -90,26 +109,7 @@ def preview():
 #         extra_opts='-c',
 #     )
 
-def publish():
-    """Automatic deploy to GitHub Pages"""
-    env.msg = "build site"
-    env.GH_TOKEN = os.getenv('GH_TOKEN')
-    env.TRAVIS_REPO_SLUG = os.getenv('TRAVIS_REPO_SLUG')
-    clean()
-    local('pelican -s publishconf.py')
-    with hide('running', 'stdout', 'stderr'):
-        local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
-        local("git push -fq https://{GH_TOKEN}@github.com/{TRAVIS_REPO_SLUG}.git {github_pages_branch}".format(**env))
-
 # def gh_pages():
 #     """Publish to GitHub Pages"""
 #     rebuild()
 #     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
-
-def deploy():
-    """Push to GitHub Pages"""
-    env.msg = 'Build site'
-    clean()
-    preview()
-    local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
-    local("git push origin {github_pages_branch}".format(**env))
