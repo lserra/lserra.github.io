@@ -80,6 +80,7 @@ def publish():
         local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
         local("git push -fq https://{GH_TOKEN}@github.com/{TRAVIS_REPO_SLUG}.git {github_pages_branch}".format(**env))
 
+<<<<<<< HEAD
 def deploy():
     """Push to GitHub Pages"""
     env.msg = 'Build site'
@@ -88,6 +89,8 @@ def deploy():
     local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
     local("git push origin {github_pages_branch}".format(**env))
 
+=======
+>>>>>>> efbee1a59050a502a6978e9d9ef908311b6178ad
 # def cf_upload():
 #     """Publish to Rackspace Cloud Files"""
 #     rebuild()
@@ -112,4 +115,16 @@ def deploy():
 # def gh_pages():
 #     """Publish to GitHub Pages"""
 #     rebuild()
+<<<<<<< HEAD
 #     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+=======
+#     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+
+# def deploy():
+#     """Push to GitHub Pages"""
+#     env.msg = 'Build site'
+#     clean()
+#     preview()
+#     local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
+#     local("git push origin {github_pages_branch}".format(**env))
+>>>>>>> efbee1a59050a502a6978e9d9ef908311b6178ad

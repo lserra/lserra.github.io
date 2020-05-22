@@ -5,35 +5,55 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lserra.github.io/</loc>
+<<<<<<< HEAD
 <lastmod>2020-05-22T20:00:47-00:00</lastmod>
+=======
+<lastmod>2020-05-22T19:18:13-00:00</lastmod>
+>>>>>>> efbee1a59050a502a6978e9d9ef908311b6178ad
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tags.html</loc>
+<<<<<<< HEAD
 <lastmod>2020-05-22T20:00:47-00:00</lastmod>
+=======
+<lastmod>2020-05-22T19:18:13-00:00</lastmod>
+>>>>>>> efbee1a59050a502a6978e9d9ef908311b6178ad
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/categories.html</loc>
+<<<<<<< HEAD
 <lastmod>2020-05-22T20:00:47-00:00</lastmod>
+=======
+<lastmod>2020-05-22T19:18:13-00:00</lastmod>
+>>>>>>> efbee1a59050a502a6978e9d9ef908311b6178ad
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/authors.html</loc>
+<<<<<<< HEAD
 <lastmod>2020-05-22T20:00:47-00:00</lastmod>
+=======
+<lastmod>2020-05-22T19:18:13-00:00</lastmod>
+>>>>>>> efbee1a59050a502a6978e9d9ef908311b6178ad
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/archives.html</loc>
+<<<<<<< HEAD
 <lastmod>2020-05-22T20:00:47-00:00</lastmod>
+=======
+<lastmod>2020-05-22T19:18:13-00:00</lastmod>
+>>>>>>> efbee1a59050a502a6978e9d9ef908311b6178ad
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

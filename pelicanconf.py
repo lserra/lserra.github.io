@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from datetime import datetime
 
 AUTHOR = 'lserra'
 SITEURL = 'https://lserra.github.io'
@@ -19,7 +20,7 @@ CC_LICENSE = {
     "version": "4.0",
     "slug": "by-sa"
 }
-COPYRIGHT_YEAR = 2020
+COPYRIGHT_YEAR = datetime.now().year
 DISQUS_SITENAME = 'goodcombination'
 
 THEME = 'themes/Flex'
@@ -82,7 +83,11 @@ SOCIAL = (
     ('twitter','https://twitter.com/laercio_serra'),
 )
 
-MENUITEMS = (('Archives', '/archives'),('Categories', '/categories'),('Tags', '/tags'))
+MENUITEMS = (
+    ('Archives', '/archives'),
+    ('Categories', '/categories'),
+    ('Tags', '/tags')
+)
 
 DEFAULT_PAGINATION = 3
 
