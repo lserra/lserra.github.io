@@ -1,10 +1,10 @@
-from fabric.api import *
-import fabric.contrib.project as project
 import os
 import shutil
-import sys
 import socketserver
+import sys
 
+import fabric.contrib.project as project
+from fabric.api import *
 from pelican.server import ComplexHTTPRequestHandler
 
 # Local path configuration (can be absolute or relative to fabfile)
@@ -40,7 +40,9 @@ def build():
 
 def rebuild():
     """`build` with the delete switch"""
-    local('pelican -d -s pelicanconf.py')
+    # local('pelican -d -s pelicanconf.py')
+    clean()
+    build()
 
 def regenerate():
     """Automatically regenerate site upon file modification"""
@@ -67,14 +69,14 @@ def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
 
-def cf_upload():
-    """Publish to Rackspace Cloud Files"""
-    rebuild()
-    with lcd(DEPLOY_PATH):
-        local('swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
-              '-U {cloudfiles_username} '
-              '-K {cloudfiles_api_key} '
-              'upload -c {cloudfiles_container} .'.format(**env))
+# def cf_upload():
+#     """Publish to Rackspace Cloud Files"""
+#     rebuild()
+#     with lcd(DEPLOY_PATH):
+#         local('swift -v -A https://auth.api.rackspacecloud.com/v1.0 '
+#               '-U {cloudfiles_username} '
+#               '-K {cloudfiles_api_key} '
+#               'upload -c {cloudfiles_container} .'.format(**env))
 
 # @hosts(production)
 # def publish():
@@ -99,10 +101,10 @@ def publish():
         local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
         local("git push -fq https://{GH_TOKEN}@github.com/{TRAVIS_REPO_SLUG}.git {github_pages_branch}".format(**env))
 
-def gh_pages():
-    """Publish to GitHub Pages"""
-    rebuild()
-    local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+# def gh_pages():
+#     """Publish to GitHub Pages"""
+#     rebuild()
+#     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
 
 def deploy():
     """Push to GitHub Pages"""
