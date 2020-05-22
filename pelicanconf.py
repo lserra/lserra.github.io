@@ -20,6 +20,7 @@ CC_LICENSE = {
     "slug": "by-sa"
 }
 COPYRIGHT_YEAR = 2020
+DISQUS_SITENAME = 'goodcombination'
 
 THEME = 'themes/Flex'
 TIMEZONE = 'America/Sao_Paulo'
