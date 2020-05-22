@@ -45,7 +45,6 @@ SITEMAP = {
     }
 }
 
-
 # Code highlighting the theme
 PYGMENTS_STYLE = 'monokai'
 
@@ -61,13 +60,13 @@ MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 
 FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
+FEED_USE_SUMMARY = True
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # HOME_HIDE_TAGS = True
-FEED_USE_SUMMARY = True
 
 MAIN_MENU = True
 
