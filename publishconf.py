@@ -10,9 +10,7 @@ import sys
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://lserra.github.io'
-DOMAIN = SITEURL
-FEED_DOMAIN = SITEURL
+SITEURL = ''
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'

@@ -5,6 +5,7 @@ from datetime import datetime
 
 AUTHOR = 'lserra'
 SITEURL = 'https://lserra.github.io'
+# SITEURL = 'localhost:8000'
 DOMAIN = SITEURL
 FEED_DOMAIN = SITEURL
 HTTPS = True
@@ -21,7 +22,6 @@ CC_LICENSE = {
     "slug": "by-sa"
 }
 COPYRIGHT_YEAR = datetime.now().year
-DISQUS_SITENAME = 'goodcombination'
 
 THEME = 'themes/Flex'
 TIMEZONE = 'America/Sao_Paulo'
@@ -72,8 +72,8 @@ AUTHOR_FEED_RSS = None
 MAIN_MENU = True
 
 LINKS = (
-    ('ideas and thoughts', 'https://lserra.github.io/'),
-    ('portfolio', 'https://lserra.github.io/'),
+    ('ideas and thoughts', SITEURL),
+    ('portfolio', SITEURL),
 )
 
 SOCIAL = (
