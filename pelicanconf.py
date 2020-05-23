@@ -77,7 +77,7 @@ LINKS = (
 )
 
 SOCIAL = (
-    ('envelope', 'mailto:laercio.serra@gmail.com'),
+    # ('envelope', 'mailto:laercio.serra@gmail.com'),
     ('github', 'https://github.com/lserra'),
     ('linkedin','https://www.linkedin.com/in/laercioserra/'),
     ('twitter','https://twitter.com/laercio_serra'),

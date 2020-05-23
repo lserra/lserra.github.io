@@ -40,7 +40,6 @@ def build():
 
 def rebuild():
     """`build` with the delete switch"""
-    # local('pelican -d -s pelicanconf.py')
     clean()
     build()
 
@@ -71,11 +70,11 @@ def preview():
 
 def publish():
     """Automatic deploy to GitHub Pages"""
-    env.msg = "build site"
+    env.msg = "deploy and publish site"
     env.GH_TOKEN = os.getenv('GH_TOKEN')
     env.TRAVIS_REPO_SLUG = os.getenv('TRAVIS_REPO_SLUG')
     clean()
-    local('pelican -s publishconf.py')
+    build()
     with hide('running', 'stdout', 'stderr'):
         local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
         local("git push -fq https://{GH_TOKEN}@github.com/{TRAVIS_REPO_SLUG}.git {github_pages_branch}".format(**env))
@@ -106,11 +105,3 @@ def publish():
 #     rebuild()
 #     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
 #     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
-
-# def deploy():
-#     """Push to GitHub Pages"""
-#     env.msg = 'Build site'
-#     clean()
-#     preview()
-#     local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
-#     local("git push origin {github_pages_branch}".format(**env))
