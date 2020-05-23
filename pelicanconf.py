@@ -22,6 +22,7 @@ CC_LICENSE = {
     "slug": "by-sa"
 }
 COPYRIGHT_YEAR = datetime.now().year
+DISQUS_SITENAME = 'goodcombination'
 
 THEME = 'themes/Flex'
 TIMEZONE = 'America/Sao_Paulo'
