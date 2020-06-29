@@ -1,0 +1,56 @@
+Title: How the Mathematics is genial and amazing
+Date: 2020-06-28 00:00
+Modified: 2020-06-28 00:00
+Category: Math
+Slug: discovering-math
+Summary: Neste artigo eu tento explicar por que a matemática é explicada de forma tão ruim?
+Tags: static, site, pelican, markdown, math
+Authors: Laercio Serra
+Status: published
+
+# Why Mathematics is not so clear?
+
+Resolvi escrever este post porque esta semana me deparei com uma newsletter, que chamou muito a minha atenção. E o título era:
+
+"**Por que a Matemática é explicada de forma tão ruim?**"
+
+E isso me deixou bastante intrigado, porque mesmo depois de ter passado por uma graduação em Engenharia da Computação e agora mais recentemente estar cursando um Doutorado em Matemática. Eu ainda me faço essa mesma pergunta e outras.
+
+Mas, será que a explicação dada para um determinado assunto, foi realmente ruim? Ou será que o assunto é complexo demais? Ou talvez, este assunto esteja um pouco além da minha compreensão neste momento?
+
+A questão é, que nunca saberemos de fato, mas o ponto é: se o assunto para o qual a explicação dada foi ruim,for um assunto do nosso interesse, ou que pelo menos tenha despertado o nosso interesse. Nós iremos prosseguir na investigação. E iremos buscar, outras opiniões e pontos de vista, que nos façam entender o assunto de um outro ângulo ou de uma outra forma, até que digamos para nós mesmos: *agora eu entendi, porque a explicação foi dada de forma boa!*
+
+Não vou entrar nesta questão filosófica da explicação versus o entendimento do assunto. Mas, irei me aprofundar sobre a Matemática. Esta ciência, que já foi considerada a rainha das ciências, tão enigmática. Ela é capaz de nos causar ao mesmo tempo sentimentos de amor e ódio. Mas, muitas vezes mal-compreendida e ultimamente um tanto esquecida. Pois de fato, para as pessoas que não estão envolvidas com a matemática, raramente ouvem falar a respeito de novos desenvolvimentos nesta área. E muitas vezes, por razões perfeitamente sensatas: *só mesmo um maluco para gostar de matemática e querer ficar acompanhando as suas tendências*.
+
+Além disso, quase nada parece ser afetado por qualquer coisa que os matemáticos estejam fazendo nos bastidores. E por fim, temos com muita frequência, a **"matemática escolar"** que foi apresentada para todos nós, num livro fechado, no qual para toda pergunta há uma resposta.  E ainda é assim para os nossos estudantes atuais.
+Ou seja, é natural que todos nós achemos que não existe nada de novo no **reino da matemática**.
+
+O ponto é que as descobertas na Matemática, elas demoram para acontecer. E quando acontecem, surgem a partir de descobertas de outras áreas. Por exemplo, o [último teorema de Fermat](https://bit.ly/2CzgtYS). Este teorema foi lançado em 1637 (século XVII), pelo matemático francês Pierre de Fermat e trata-se de uma generalização do famoso teorema de Pitágoras. Apenas em 1995, ou seja, 358 anos depois, um matemático britânico conseguiu provar a teoria de Fermat. Este, passou a ser conhecido como o mais famoso e duradouro teorema matemático de seu tempo. E passou a ser conhecido por **Teorema de Fermat-Wiles**. E como não bastasse, este teorema foi incluído no *Guinness Book*, como "*o mais intricado problema matemático da história*".
+É claro que este meu exemplo foi um pouco exagerado, mas é a realidade. Existem pesquisas matemáticas prosperando, com novas descobertas sendo feitas o tempo todo. Só não são divulgadas na mídia, na mesma proporção do que o caso Queiroz e o sítio de Atibaia/SP (o lugar mais famoso do Brasil, onde abriga pessoas públicas e ilustres).
+
+Também é verdade que na matemática as descobertas, sejam elas para problemas antigos ou novos, não são lançados na mesma proporação que releases de software (a cada seis meses). Então, por exemplo, o problema conhecido como [o espaço de Hilbert](https://bit.ly/2Vdvsyj), é uma generalização do espaço euclidiano, que não precisa estar restrita a um número finito de dimensões. Este problema foi levantado em 1930 pelo matemático húngaro John von Neuman, em seguida desenvolvido e formalizado a toda comunidade técnica pelo matemático alemão David Hilbert em 1940. Este problema é de importância crucial para a mecânica quântica, que foi resolvido recentemente em 2013, por dois [matemáticos](https://bit.ly/3eyefXP): uma espanhola e um norte-americano.
+
+E se tratando de [problemas](https://bit.ly/2ZbjXbO), ainda existem alguns para serem resolvidos. Os problemas citados acima, são considerados problemas matemáticos do milênio do Instituto Clay, com um prêmio de 1 milhão de dólares. E qualquer pessoa pode tentar resolver um destes problemas. Por um lado não se resolve um problema sendo este grande ou não, se você não está familiarizado com a área ou áreas ao qual ele pertence. E por falar em áreas a matemática muitas vezes parece uma coleção de áreas isoladas, cada uma com suas técnicas especiais peculiares: álgebra, análise, geometria, trigonometria, combinatória, etc. Na verdade ela tende a ser ensinada assim, por um bom motivo: situar cada tópico separadamente, em uma área específica ajuda o aluno a organizar o assunto em sua cabeça. Sem dúvida é uma primeira aproximação razoável para a estrutura da matemática, sobretudo com aquela que foi estabelecida há muito tempo. Mas, nas fronteiras da pesquisa, essa delineação tende a se romper. Pois o problema para o qual se está trabalhando pode requerer ideias de uma área aparentemente não correlacionada. Portanto, a matemática não é como um mapa político do mundo, com cada especialidade ordenadamente cercada por uma fronteira clara. É mais como uma paisagem natural, onde nunca se pode realmente saber onde termina um vale e começa o morro.
+
+Mas, não podemos esquecer que grande parte do que há no mundo atualmente em termos de inovação e tecnologia, independente da área de conhecimento, surgiram de pesquisas e problemas resolvidos anos atrás. E quem diria, que por exemplo, a [análise de Fourier](https://bit.ly/2B9sV1p), também conhecida como análise harmônica ou simplesmente as transformadas de Fourier, que surgiu em 1822 (século XVIII), é o principal pilar das modernas telecomunicações, além disso possibilita a existência de câmeras digitais e uma extensão moderna dela é usada pelo FBI para arquivar registros de impressões digitais.
+
+Um [livro](https://amzn.to/2Zc8Hfi) muito interessante que eu recomendo a todos que se interessam pelo assunto, é **17 equações que mudaram o mundo**. O Autor explora as conexões vitais entre a matemática e o progresso da humanidade e demonstra como as equações são parte integrante da nossa vida desde a Antiguidade, abrindo novas perspectivas de desenvolvimento - seja com as telecomunicações, GPS, lasers, naves espaciais ou a energia atômica. O livro é um relato apaixonado e único da história do homem, contado através de *dezessete* formulações matemáticas cruciais, do teorema de Pitágoras à teoria do caos. Não estou ganhando nenhum centavo pelo jabá deste livro, mas realmente o livro é bem interessante.
+
+E para finalizar este post, temos que considerar que os matemáticos são motivados pelo desafio de um problema, independente deste problema vir a ter ou não alguma utilidade pública imediata ou futura. E para deixar claro o que eu estou tentando dizer, é que algumas das teorias concebidas há muitos anos atrás agora que estão tendo alguma aplicação. Enquanto que outras estão sendo absorvidas por computadores. Mas, o seu conceito continua sendo válido e aplicado. Como é o caso, por exemplo, dos logaritmos. Por que precisamos de logaritmos agora que temos computadores?
+
+Vamos relembrar o caso de um terremoto de magnitude 9 na costa oriental do Japão, provocando em 2011, um gigantesco tsunami que devastou uma área densamente habitada, matando cerca de 25 mil pessoas. Neste mesmo lugar havia uma usina de energia nuclear, chamada de Fukushima 1. E nesta usina seis reatores nucleares distintos ficaram comprometidos: 3 estavam em operação quando o tsunami atingiu a usina e os outros 3 haviam cessado de operar temporariamente e seu combustível fora transferido para reservatórios de água fora dos reatores, mas dentro dos edifícios da usina. O tsunami sobrecarregou as defesas da usina, cortando o suprimento de energia elétrica. Por sua vez, o sistema de resfriamento parou e o combustível nuclear em vários reatores começou a superaquecer. E como contingência os operadores usaram os extintores de incêndio para bombear água do mar nos três reatores em funcionamento, mas esta água reagiu com o revestimento de zircônio das hastes de combustível produzindo hidrogênio. Isso ocasionou uma explosão no edifício que abrigava o reator 1. O mesmo aconteceu para os reatores 2 e 3. Quando a situação finalmente parecia estar sob controle, perceberam que o recipiente de contenção de pelo menos um dos reatores havia rachado e havia radiação vazando para o ambiente local. E é aqui que entram os logaritmos, para responder uma questão vital: se sabemos quanto material radiativo foi liberado, e de que tipo, então podemos responder por quanto tempo ele permanecerá no ambiente, onde pode ser perigoso?
+
+Elementos radiativos decaem, quero dizer, transforman-se em outros elementos mediante processos nucleares, emitindo partículas nucleares ao fazê-lo. São essas partículas que constituem a radiação. O nível de radiatividade cai com o tempo da mesma maneira que a temperatura de um corpo quente ao esfriar: de forma exponencial. Em acidentes com reatores nucleares convencionais, os produtos radiativos mais importantes são o iodo-131 e o césio-137. O primeiro pode causar câncer na tireoide, porque a glândula tireoide concentra iodo. A meia-vida do iodo-131 é de apenas oito dias, de modo que ele causa pouco dano se pudermos dispor da medicação adequada, e seus riscos descrescem de forma muito rápida a menos que continue a vazar. Já o césio-137 é muito diferente: ele tem uma meia-vida de trinta anos. Leva cerca de duzentos anos para que o nível de radiatividade caia para um centésimo do valor incial, de modo que ele permanece perigoso por muito tempo.
+
+O decaimento radiativo é apenas uma das muitas áreas nas quais os logaritmos continuam a servir a ciência e a humanidade. Na verdade os conceitos dos logaritmos ainda são muito aplicados em termodinâmica e também em [teoria da informação](https://bit.ly/3idGUnc). Outra aplicação de logaritmos provém dos estudos da percepção humana: como sentimos o mundo ao nosso redor.
+
+Isso nos mostra o quanto a matemática é genial e incrível. E ela continua sendo uma ciência avançada e atual, ao contrário dos que muitos imaginam. 
+
+E para responder a pergunta que deu origem a este post, segue abaixo, o pensamento de um dos grandes matemáticos para análise e reflexão:
+
+> "A matemática é a única ciência exata em que nunca se sabe do que se está a falar nem se aquilo que se diz é verdadeiro." - *Bertrand Russell*
+
+Para escrever este post eu usei as seguintes referências bibliográficas:
+
+- Os maiores problemas matemáticos de todos os tempos. Editora Zahar. Autor: Ian Stewart.
+- 17 equações que mudaram o mundo. Editora Zahar. Autor: Ian Stewart.
