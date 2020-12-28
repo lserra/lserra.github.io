@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lserra.github.io/</loc>
-<lastmod>2020-06-28T22:39:26-00:00</lastmod>
+<lastmod>2020-12-28T12:50:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tags.html</loc>
-<lastmod>2020-06-28T22:39:26-00:00</lastmod>
+<lastmod>2020-12-28T12:50:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/categories.html</loc>
-<lastmod>2020-06-28T22:39:26-00:00</lastmod>
+<lastmod>2020-12-28T12:50:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/authors.html</loc>
-<lastmod>2020-06-28T22:39:26-00:00</lastmod>
+<lastmod>2020-12-28T12:50:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/archives.html</loc>
-<lastmod>2020-06-28T22:39:26-00:00</lastmod>
+<lastmod>2020-12-28T12:50:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -50,6 +50,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <lastmod>2020-05-23T10:27:00-03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/2020/11/home-office/</loc>
+<lastmod>2020-11-13T00:00:00-02:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
 </url>
 
 <url>
@@ -74,6 +81,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://lserra.github.io/category/life.html</loc>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://lserra.github.io/category/math.html</loc>
 <lastmod>2020-06-28T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
@@ -82,28 +96,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lserra.github.io/tag/static.html</loc>
-<lastmod>2020-06-28T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tag/site.html</loc>
-<lastmod>2020-06-28T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tag/pelican.html</loc>
-<lastmod>2020-06-28T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tag/markdown.html</loc>
-<lastmod>2020-06-28T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/tag/life.html</loc>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/tag/home-office.html</loc>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -117,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lserra.github.io/author/laercio-serra.html</loc>
-<lastmod>2020-06-28T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
