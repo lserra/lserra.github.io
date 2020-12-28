@@ -14,7 +14,7 @@ O trabalho remoto sempre foi algo que eu desejei em minha vida profissional em c
 Mas, apesar das circunstâncias, está sendo uma experiência ótima e muito gratificante. Apesar da isolação social que estamos vivenciando, percebo que eu sou mais produtivo.
 E o meu tempo é mais bem aproveitado. O home-office tem as suas vantagens e desvanttagens. (Eu listo algumas abaixo)
 E apesar das suas desvantagens, ainda assim, me sinto profissionalmente mais feliz e totalmente realizado. Talvez esta não seja a realidade para todos.
-Muitas pessoas realmente, estão com dificuldades de adaptação a este novo cenário. E isso tem as deixando mais estressadas e infelizes.
+Muitas pessoas realmente, estão com dificuldades de adaptação a este novo cenário. E isso tem deixado as pessoas mais estressadas e infelizes.
 No início a adaptação ao home-office é um pouco difícil, mas com um pouco de perseverança a mudança de hábito acaba acontecendo.
 E as coisas passam a fluir melhor. E então quando isso acontece, você percebe a importância do home-office na sua vida.
 Então você se pergunta, por que só agora?
