@@ -28,24 +28,29 @@ env.github_pages_branch = "master"
 SERVER = '127.0.0.1'
 PORT = 8000
 
+
 def clean():
     """Remove generated files"""
     if os.path.isdir(DEPLOY_PATH):
         shutil.rmtree(DEPLOY_PATH)
         os.makedirs(DEPLOY_PATH)
 
+
 def build():
     """Build local version of site"""
     local('pelican -s pelicanconf.py')
+
 
 def rebuild():
     """`build` with the delete switch"""
     clean()
     build()
 
+
 def regenerate():
     """Automatically regenerate site upon file modification"""
     local('pelican -r -s pelicanconf.py')
+
 
 def serve():
     """Serve site at http://localhost:8000/"""
@@ -59,14 +64,17 @@ def serve():
     sys.stderr.write('Serving on port {0} ...\n'.format(PORT))
     server.serve_forever()
 
+
 def reserve():
     """`build`, then `serve`"""
     build()
     serve()
 
+
 def preview():
     """Build production version of site"""
     local('pelican -s publishconf.py')
+
 
 def publish():
     """Automatic deploy to GitHub Pages"""
@@ -76,8 +84,10 @@ def publish():
     clean()
     build()
     with hide('running', 'stdout', 'stderr'):
-        local("ghp-import -m '{msg}' -b {github_pages_branch} {deploy_path}".format(**env))
-        local("git push -fq https://{GH_TOKEN}@github.com/{TRAVIS_REPO_SLUG}.git {github_pages_branch}".format(**env))
+        local("ghp-import -m '{msg}' -b {github_pages_branch} "
+              "{deploy_path}".format(**env))
+        local("git push -fq https://{GH_TOKEN}@github.com/"
+              "{TRAVIS_REPO_SLUG}.git {github_pages_branch}".format(**env))
 
 # def cf_upload():
 #     """Publish to Rackspace Cloud Files"""

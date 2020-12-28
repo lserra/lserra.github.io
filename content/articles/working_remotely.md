@@ -50,7 +50,7 @@ E, tente outra vez!
 
 # Advantages and Disadvantages
 
-![WorkRemoteSurvey](/content/images/WorkRemoteSurvey.png)
+![WorkRemoteSurvey](~/lserra.github.io/content/images/WorkRemoteSurvey.png)
 
 Source: Vox Survey
 
