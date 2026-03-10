@@ -5,7 +5,7 @@ good_combination = { m, d, c }
 
 Ideas and thoughts about mathematics, data, coding. It's a good combination!
 
-Stay in touch with us too.
+Stay in touch with me.
 
 Register in our site and receive our feeds.
 
@@ -24,8 +24,8 @@ The easiest way to do this in a Python is using [virtual environment](http://doc
 Once you have `virtualenv` installed, create a virtual environment to hold Pelican and its dependencies:
 
 ```shell
-$ virtualenv .venv
-$ source .venv/bin/activate
+$ virtualenv venv
+$ source venv/bin/activate
 ```
 
 This creates a virtual environment and then activates it. If you want to exit the virtual environment, type:
