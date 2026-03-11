@@ -134,7 +134,7 @@
     <p>
       Posted on Sun 15 March 2026 in <a href="https://lserra.github.io/category/data-engineering.html">Data Engineering</a>
 
-        &#8226; 4 min read
+        &#8226; 5 min read
     </p>
   </header>
 
@@ -184,6 +184,75 @@
 - <strong>Data Pre-processing:</strong> Ganho de velocidade massivo na engenharia de <em>features</em> para datasets gigantescos.
 - <strong>Infraestrutura:</strong> Consolidação como a linguagem padrão de ferramentas como Docker, Kubernetes e Prometheus.</p>
 <p>Este é apenas o início da minha jornada explorando o potencial do Go na Engenharia de Dados. Nos próximos artigos, trarei detalhes técnicos e implementações práticas para provar que, às vezes, para ir mais longe, é preciso mudar o motor.</p>
+<h1>Apêndice Técnico:</h1>
+<p>Vamos imaginar um cenário muito comum na Engenharia de Dados (processamento concorrente de dados): ler um arquivo CSV grande, processar cada linha e simular um envio para uma API ou Banco de Dados.</p>
+<p>O objetivo é processar 100.000 registros. Enquanto o Python processa sequencialmente (ou exige bibliotecas complexas para paralelismo real), o Go faz isso de forma nativa e extremamente leve.</p>
+<h2>1. Implementação em Python</h2>
+<p>Usa o modelo sequencial. Para paralelizar, o custo de memória seria alto devido ao multiprocessing.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">process_row</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+    <span class="c1"># Simula uma tarefa pesada (ex: validação ou hash)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span> 
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">run_pipeline</span><span class="p">():</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="n">process_row</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Python terminou em: </span><span class="si">{</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">start</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> segundos&quot;</span><span class="p">)</span>
+
+<span class="c1"># Nota: Processar 100k linhas levaria ~100/200 segundos aqui.</span>
+</code></pre></div>
+
+<h2>2. Implementação em Go (o motor Turbo)</h2>
+<p>Usa o padrão Worker Pool com Goroutines. Aqui, processamos múltiplas linhas simultaneamente sem sobrecarregar o sistema.</p>
+<p>```go
+package main</p>
+<p>import (
+    "encoding/csv"
+    "fmt"
+    "os"
+    "sync"
+    "time"
+)</p>
+<p>func worker(jobs &lt;-chan []string, wg *sync.WaitGroup) {
+    defer wg.Done()
+    for range jobs {
+        // Simula a mesma tarefa pesada
+        time.Sleep(1 * time.Millisecond)
+    }
+}</p>
+<p>func main() {
+    file, _ := os.Open("data.csv")
+    reader := csv.NewReader(file)
+    records, _ := reader.ReadAll()</p>
+<div class="highlight"><pre><span></span><code><span class="n">start</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">Now</span><span class="p">()</span>
+<span class="n">jobs</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="n">make</span><span class="p">(</span><span class="n">chan</span><span class="w"> </span><span class="p">[]</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">len</span><span class="p">(</span><span class="n">records</span><span class="p">))</span>
+<span class="k">var</span><span class="w"> </span><span class="n">wg</span><span class="w"> </span><span class="n">sync</span><span class="o">.</span><span class="n">WaitGroup</span>
+
+<span class="o">//</span><span class="w"> </span><span class="n">Criamos</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="n">workers</span><span class="w"> </span><span class="p">(</span><span class="n">goroutines</span><span class="p">)</span><span class="w"> </span><span class="n">leves</span>
+<span class="k">for</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">w</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">w</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">wg</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="w">    </span><span class="n">go</span><span class="w"> </span><span class="n">worker</span><span class="p">(</span><span class="n">jobs</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">wg</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">for</span><span class="w"> </span><span class="n">_</span><span class="p">,</span><span class="w"> </span><span class="n">record</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="nb">range</span><span class="w"> </span><span class="n">records</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">jobs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">record</span>
+<span class="p">}</span>
+<span class="n">close</span><span class="p">(</span><span class="n">jobs</span><span class="p">)</span>
+<span class="n">wg</span><span class="o">.</span><span class="n">Wait</span><span class="p">()</span>
+
+<span class="n">fmt</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;Go terminou em: %v</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">time</span><span class="o">.</span><span class="n">Since</span><span class="p">(</span><span class="n">start</span><span class="p">))</span>
+</code></pre></div>
+
+<p>}
+// Nota: Com 100 workers, o tempo cai drasticamente para ~1-2 segundos.
+````</p>
 <p><strong>Stay safe, stay at home-office!</strong></p>
   </div>
   <div class="tag-cloud">

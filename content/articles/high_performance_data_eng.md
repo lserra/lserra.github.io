@@ -83,8 +83,11 @@ O "Footprint": Você não quer que o monitor (Sidecar) consuma mais memória que
 # O Futuro: IA, Big Data e Além
 
 Se sua organização enfrenta gargalos de performance, a adoção do Go deve ser incremental e focada em problemas específicos (PoCs). O horizonte para a linguagem é promissor:
+ 
 - **ML Inference:** Excelente para servir modelos em tempo real com baixa latência.
+
 - **Data Pre-processing:** Ganho de velocidade massivo na engenharia de *features* para datasets gigantescos.
+ 
 - **Infraestrutura:** Consolidação como a linguagem padrão de ferramentas como Docker, Kubernetes e Prometheus.
 
 Este é apenas o início da minha jornada explorando o potencial do Go na Engenharia de Dados. Nos próximos artigos, trarei detalhes técnicos e implementações práticas para provar que, às vezes, para ir mais longe, é preciso mudar o motor.
@@ -167,8 +170,8 @@ func main() {
 	fmt.Printf("Go terminou em: %v\n", time.Since(start))
 }
 // Nota: Com 100 workers, o tempo cai drasticamente para ~1-2 segundos.
-````
+```
 
-
+Depois de rodar ambos os códigos, a diferença é clara: o Go processa 100.000 registros em segundos, enquanto o Python leva minutos. Este é o poder do Go para tarefas de alta performance na Engenharia de Dados.
 
 **Stay safe, stay at home-office!**
