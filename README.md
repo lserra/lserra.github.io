@@ -44,7 +44,7 @@ Acesse http://localhost:8000 após `inv serve`.
 
 - `content/articles/`: posts do blog
 - `content/pages/`: páginas estáticas (sobre, contato etc.)
-- `content/images/`: imagens usadas por posts/paginas
+- `content/images/`: imagens usadas por posts/páginas
 - `output/`: site gerado (seguro recriar)
 - `custom-plugins/`: overrides locais para compatibilidade de plugins legados
 - `pelicanconf.py`: configuração principal (desenvolvimento/padrão)
