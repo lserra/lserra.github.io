@@ -72,8 +72,7 @@ inv build
 
 1. limpa `output/`
 2. gera com `publishconf.py`
-3. executa `ghp-import`
-4. faz push para a branch configurada (`master` em `tasks.py`)
+3. executa `ghp-import` com push para a branch configurada (`master` em `tasks.py`)
 
 Se a sua branch do Pages for `main` em vez de `master`, ajuste
 `github_pages_branch` em `tasks.py`.

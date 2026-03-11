@@ -84,9 +84,8 @@ def publish(c):
     clean(c)
     c.run("pelican -s {settings_publish}".format(**CONFIG))
     c.run(
-        'ghp-import -m "{commit_message}" -b {github_pages_branch} {deploy_path}'.format(
+        'ghp-import -f -p -m "{commit_message}" -b {github_pages_branch} {deploy_path}'.format(
             **CONFIG
         )
     )
-    c.run("git push origin {github_pages_branch}".format(**CONFIG))
     print("🚀 Site publicado no GitHub Pages!")
