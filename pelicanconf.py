@@ -30,7 +30,7 @@ DEFAULT_LANG = 'pt-BR'
 PLUGINS = ['sitemap', 'post_stats', 'feed_summary']
 
 PATH = 'content'
-PLUGIN_PATHS = ['./pelican-plugins']
+PLUGIN_PATHS = ['./custom-plugins', './pelican-plugins']
 STATIC_PATHS = ['images', 'extra']
 
 SITEMAP = {

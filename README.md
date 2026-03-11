@@ -11,12 +11,12 @@ Este repositório contém o código-fonte de https://lserra.github.io, gerado co
 
 - Python 3 + Pelican
 - Pelican plugins (`pelican-plugins/`)
-- Automacao de tarefas com Invoke (`tasks.py`)
-- Publicacao no GitHub Pages com `ghp-import`
+- Automação de tarefas com Invoke (`tasks.py`)
+- Publicação no GitHub Pages com `ghp-import`
 
-## Inicio rapido
+## Início rápido
 
-Se voce ja criou e selecionou o virtualenv na IDE, execute:
+Se você já criou e selecionou o virtualenv na IDE, execute:
 
 ```bash
 pip install -r requirements.txt
@@ -29,25 +29,26 @@ Este projeto usa `inv`/Invoke no lugar dos comandos antigos com `fab`.
 
 ```bash
 inv clean       # remove os arquivos gerados em output/
-inv build       # gera a versao de desenvolvimento
+inv build       # gera a versão de desenvolvimento
 inv rebuild     # clean + build
-inv regenerate  # monitora arquivos e regenera ao detectar mudancas
+inv regenerate  # monitora arquivos e regenera ao detectar mudanças
 inv serve       # build + servidor com live reload na porta :8000
 inv reserve     # alias para serve
 inv preview     # build com publishconf.py
-inv publish     # build + publicacao na branch do GitHub Pages
+inv publish     # build + publicação na branch do GitHub Pages
 ```
 
-Acesse http://localhost:8000 apos `inv serve`.
+Acesse http://localhost:8000 após `inv serve`.
 
 ## Estrutura do projeto
 
 - `content/articles/`: posts do blog
-- `content/pages/`: paginas estaticas (sobre, contato etc.)
+- `content/pages/`: páginas estáticas (sobre, contato etc.)
 - `content/images/`: imagens usadas por posts/paginas
 - `output/`: site gerado (seguro recriar)
-- `pelicanconf.py`: configuracao principal (desenvolvimento/padrao)
-- `publishconf.py`: ajustes de producao
+- `custom-plugins/`: overrides locais para compatibilidade de plugins legados
+- `pelicanconf.py`: configuração principal (desenvolvimento/padrão)
+- `publishconf.py`: ajustes de produção
 - `tasks.py`: ponto de entrada das tarefas Invoke
 
 ## Atualizar links sociais (incluindo LinkedIn)
@@ -66,7 +67,7 @@ Em seguida, gere o site novamente:
 inv build
 ```
 
-## Fluxo de publicacao
+## Fluxo de publicação
 
 `inv publish` executa:
 
@@ -79,39 +80,41 @@ Se a sua branch do Pages for `main` em vez de `master`, ajuste
 
 ## CI/CD (GitHub Actions)
 
-O deploy automatico foi migrado do Travis CI para GitHub Actions.
+O deploy automático foi migrado do Travis CI para GitHub Actions.
 
 - Workflow: `.github/workflows/pelican-pages.yml`
 - Build: executa em `push` e `pull_request` na branch `source`
 - Deploy: executa apenas em `push` na branch `source`, usando `python -m invoke publish`
 
-Configuracao recomendada no GitHub Pages:
+Configuração recomendada no GitHub Pages:
 
 - Source: `Deploy from a branch`
 - Branch: `master`
 - Folder: `/ (root)`
 
-## Solucao de problemas
+## Solução de problemas
 
 - `Unresolved reference 'invoke'` na IDE:
-  garanta que o interpretador selecionado e o virtualenv do projeto e execute
+  garanta que o interpretador selecionado é o virtualenv do projeto e execute
   `pip install -r requirements.txt`.
 - `inv: command not found`:
   use `python -m invoke <task>` em vez de `inv`.
 - Comando do Pelican ausente durante tarefas:
-  confirme que as dependencias foram instaladas no virtualenv ativo.
+  confirme que as dependências foram instaladas no virtualenv ativo.
 
 ## Notas de legado
 
-- `fabfile.py` existe por compatibilidade historica, mas o fluxo recomendado
-  e `tasks.py` + Invoke.
-- `fab` e bloqueado por design neste repositorio para evitar uso acidental de
-  automacao depreciada; use os comandos `inv`.
+- `fabfile.py` existe por compatibilidade histórica, mas o fluxo recomendado
+  é `tasks.py` + Invoke.
+- `fab` é bloqueado por design neste repositório para evitar uso acidental de
+  automação depreciada; use os comandos `inv`.
+- `custom-plugins/` existe para manter compatibilidade com plugins legados que
+  não são totalmente compatíveis com as versões atuais de Python/Jinja2.
 
-## Licenca
+## Licença
 
-O codigo-fonte esta sob licenca MIT (veja o arquivo de licenca do projeto).
-O conteudo do blog permanece protegido por direitos autorais do autor.
+O código-fonte está sob licença MIT (veja o arquivo de licença do projeto).
+O conteúdo do blog permanece protegido por direitos autorais do autor.
 
 ## Contato
 
