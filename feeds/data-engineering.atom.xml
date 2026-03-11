@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Good Combination - Data Engineering</title><link href="https://lserra.github.io/" rel="alternate"/><link href="https://lserra.github.io/feeds/data-engineering.atom.xml" rel="self"/><id>https://lserra.github.io/</id><updated>2026-03-15T09:00:00-03:00</updated><subtitle>matemática, dados e código</subtitle><entry><title>Engenharia de Dados de Alta Performance: O Caso do Golang</title><link href="https://lserra.github.io/2026/03/high-performance-data-eng-go/" rel="alternate"/><published>2026-03-15T09:00:00-03:00</published><updated>2026-03-15T09:00:00-03:00</updated><author><name>Laercio Serra</name></author><id>tag:lserra.github.io,2026-03-15:/2026/03/high-performance-data-eng-go/</id><summary type="html">&lt;p&gt;Por que o Go está se tornando o motor de eficiência para arquiteturas de dados modernas e cloud-native.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Além do Óbvio: Por que falar de Go em um mundo Python?&lt;/h1&gt;
+&lt;p&gt;Na engenharia de dados moderna, dominar o ecossistema Python é o requisito básico. No entanto, o diferencial do especialista está em identificar quando essa flexibilidade se torna um gargalo. Hoje, apresento o &lt;strong&gt;Golang (Go)&lt;/strong&gt; não como um substituto, mas como o motor estratégico para sistemas de dados de alto desempenho, especialmente em infraestruturas &lt;em&gt;cloud-native&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Embora o ecossistema de bibliotecas analíticas do Python seja vasto, o Go brilha onde o Python muitas vezes hesita: na &lt;strong&gt;concorrência massiva, eficiência de memória e baixo consumo de recursos&lt;/strong&gt;. O Go não é apenas uma linguagem; é uma escolha arquitetural para quem busca reduzir latência e custos operacionais.&lt;/p&gt;
+&lt;h1&gt;O Imperativo da Performance&lt;/h1&gt;
+&lt;p&gt;O cenário atual é implacável: o volume e a velocidade dos dados exigem processamento em tempo real e escalabilidade financeiramente sustentável. O Go, desenvolvido pelo Google com foco em simplicidade e execução, alinha-se ao que chamo de "imperativo de desempenho".&lt;/p&gt;
+&lt;p&gt;Um exemplo real e impactante é o caso de uso em projetos de &lt;em&gt;Smart Cities&lt;/em&gt;: a migração de componentes críticos de ETL de Python para Go resultou em uma &lt;strong&gt;redução de 90% na latência de processamento&lt;/strong&gt; e uma &lt;strong&gt;economia de 60% na fatura de nuvem&lt;/strong&gt;. O Go se posiciona como o "motor turbo" em uma arquitetura poliglota.&lt;/p&gt;
+&lt;h1&gt;Os Pilares da Excelência com Go&lt;/h1&gt;
+&lt;p&gt;Para entender por que o Go é a primeira opção para engenharia de alta performance, precisamos olhar para seus atributos fundamentais:&lt;/p&gt;
+&lt;h2&gt;1. Desempenho Binário e Eficiência&lt;/h2&gt;
+&lt;p&gt;Como linguagem compilada, o Go traduz-se diretamente em código de máquina. Isso elimina o overhead de interpretação, resultando em menor pegada de memória e menor uso de CPU. Na nuvem, isso significa rodar as mesmas cargas de trabalho em instâncias significativamente menores.&lt;/p&gt;
+&lt;h2&gt;2. Concorrência Nativa (Goroutines)&lt;/h2&gt;
+&lt;p&gt;Diferente de outras linguagens que dependem de threads pesadas do SO, o Go introduz as &lt;strong&gt;Goroutines&lt;/strong&gt; e os &lt;strong&gt;Channels&lt;/strong&gt;. Este modelo é ideal para tarefas &lt;em&gt;I/O-bound&lt;/em&gt;, permitindo que um único serviço gerencie milhares de conexões de entrada e saída simultaneamente sem o risco de &lt;em&gt;data races&lt;/em&gt; comuns em memória compartilhada.&lt;/p&gt;
+&lt;h2&gt;3. Robustez e Tipagem Estática&lt;/h2&gt;
+&lt;p&gt;O sistema de tipos do Go detecta erros estruturais em tempo de compilação, e seu mecanismo explícito de tratamento de erros (&lt;code&gt;if err != nil&lt;/code&gt;) força o desenvolvedor a construir sistemas resilientes. Em produção, isso se traduz em pipelines que não "quebram silenciosamente".&lt;/p&gt;
+&lt;h2&gt;4. Agilidade no Deployment&lt;/h2&gt;
+&lt;p&gt;A capacidade de compilar toda a aplicação em um &lt;strong&gt;único binário estático&lt;/strong&gt; simplifica o ciclo de CI/CD. Imagens Docker tornam-se mínimas (distroless), acelerando o tempo de deploy e facilitando a orquestração em Kubernetes.&lt;/p&gt;
+&lt;h1&gt;Arquitetura Poliglota: Go vs. Python&lt;/h1&gt;
+&lt;p&gt;Não se trata de uma guerra de linguagens. Enquanto o Python domina a camada de ciência de dados e transformações complexas, o Go é a alternativa superior para a &lt;strong&gt;infraestrutura subjacente&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;O Go não tenta replicar serviços gerenciados como AWS Glue ou GCP Dataflow; ele é usado para construir &lt;strong&gt;componentes personalizados de alto impacto&lt;/strong&gt; — como agentes de ingestão e microsserviços de enriquecimento — que aumentam a eficiência desses serviços.&lt;/p&gt;
+&lt;h1&gt;Infraestrutura Subjacente&lt;/h1&gt;
+&lt;p&gt;Quando falamos de infraestrutura subjacente (ou underlying infrastructure), estamos nos referindo aos alicerces, as "engrenagens" invisíveis que sustentam o dado antes mesmo dele chegar no seu banco de dados ou no seu modelo de Machine Learning.&lt;/p&gt;
+&lt;p&gt;Imagine um prédio: o acabamento, a decoração e o design dos apartamentos (onde o valor é percebido pelo morador). A infraestrutura subjacente é a fundação, o encanamento, a rede elétrica e os elevadores. Sem eles, o prédio não funciona, por mais bonito que seja.&lt;/p&gt;
+&lt;p&gt;Na prática da Engenharia de Dados, isso se traduz em:&lt;/p&gt;
+&lt;h2&gt;1. Ingestão e Conectores&lt;/h2&gt;
+&lt;p&gt;É o componente que fica na "ponta" do sistema. Ele precisa escutar milhares de fontes (Websockets, APIs, sensores IoT) simultaneamente.&lt;/p&gt;
+&lt;p&gt;Por que Go aqui? Porque você precisa de alta concorrência para manter milhares de conexões abertas sem consumir gigabytes de RAM.&lt;/p&gt;
+&lt;h2&gt;2. Buffering e Mensageria&lt;/h2&gt;
+&lt;p&gt;Componentes que gerenciam filas e garantem que o dado não se perca se o banco de dados cair. É a "caixa d'água" do seu sistema.&lt;/p&gt;
+&lt;p&gt;Exemplo: Um agente que lê do Kafka e faz um checkpoint de segurança. Se esse componente for lento (gargalo), todo o pipeline atrasa.&lt;/p&gt;
+&lt;h2&gt;3. Proxy de Dados e Gateways&lt;/h2&gt;
+&lt;p&gt;Muitas vezes, você precisa de uma camada que valide se o dado que está entrando está no formato correto (Schema Validation) antes de salvá-lo.&lt;/p&gt;
+&lt;p&gt;A vantagem do Go: Como o Go é tipado e compilado, ele valida esses campos na velocidade da luz, descartando lixo antes que ele polua seu Data Lake.&lt;/p&gt;
+&lt;h2&gt;4. Serialização e Deserialização&lt;/h2&gt;
+&lt;p&gt;O processo de transformar dados brutos (JSON) em formatos binários eficientes (Parquet, Avro, Protobuf).&lt;/p&gt;
+&lt;p&gt;O custo: Essa é uma das tarefas que mais exige CPU. O Go faz isso de forma extremamente eficiente, permitindo que você processe arquivos gigantescos em segundos, enquanto o Python levaria minutos.&lt;/p&gt;
+&lt;h2&gt;5. Sidecars e Observabilidade&lt;/h2&gt;
+&lt;p&gt;São pequenos programas que rodam ao lado dos seus jobs principais para monitorar se tudo está bem, coletar logs e métricas.&lt;/p&gt;
+&lt;p&gt;O "Footprint": Você não quer que o monitor (Sidecar) consuma mais memória que o processo principal. Por isso, quase todas as ferramentas modernas de infraestrutura (Docker, Kubernetes, Prometheus) são escritas em Go.&lt;/p&gt;
+&lt;h1&gt;O Futuro: IA, Big Data e Além&lt;/h1&gt;
+&lt;p&gt;Se sua organização enfrenta gargalos de performance, a adoção do Go deve ser incremental e focada em problemas específicos (PoCs). O horizonte para a linguagem é promissor:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ML Inference:&lt;/strong&gt; Excelente para servir modelos em tempo real com baixa latência.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Data Pre-processing:&lt;/strong&gt; Ganho de velocidade massivo na engenharia de &lt;em&gt;features&lt;/em&gt; para datasets gigantescos.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Infraestrutura:&lt;/strong&gt; Consolidação como a linguagem padrão de ferramentas como Docker, Kubernetes e Prometheus.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Este é apenas o início da minha jornada explorando o potencial do Go na Engenharia de Dados. Nos próximos artigos, trarei detalhes técnicos e implementações práticas para provar que, às vezes, para ir mais longe, é preciso mudar o motor.&lt;/p&gt;
+&lt;h1&gt;Apêndice Técnico:&lt;/h1&gt;
+&lt;p&gt;Vamos imaginar um cenário muito comum na Engenharia de Dados (processamento concorrente de dados): ler um arquivo CSV grande, processar cada linha e simular um envio para uma API ou Banco de Dados.&lt;/p&gt;
+&lt;p&gt;O objetivo é processar 100.000 registros. Enquanto o Python processa sequencialmente (ou exige bibliotecas complexas para paralelismo real), o Go faz isso de forma nativa e extremamente leve.&lt;/p&gt;
+&lt;h2&gt;1. Implementação em Python&lt;/h2&gt;
+&lt;p&gt;Usa o modelo sequencial. Para paralelizar, o custo de memória seria alto devido ao multiprocessing.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;csv&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;process_row&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# Simula uma tarefa pesada (ex: validação ou hash)&lt;/span&gt;
+    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.001&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;run_pipeline&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;data.csv&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;r&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;reader&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;csv&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;process_row&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Python terminou em: &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s2"&gt;.2f&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; segundos&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Nota: Processar 100k linhas levaria ~100/200 segundos aqui.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h2&gt;2. Implementação em Go (o motor Turbo)&lt;/h2&gt;
+&lt;p&gt;Usa o padrão Worker Pool com Goroutines. Aqui, processamos múltiplas linhas simultaneamente sem sobrecarregar o sistema.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;encoding/csv&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;os&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sync&amp;quot;&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="s"&gt;&amp;quot;time&amp;quot;&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;worker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jobs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="kd"&gt;chan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;wg&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="nx"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;WaitGroup&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;defer&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;wg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Done&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;range&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;jobs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="c1"&gt;// Simula a mesma tarefa pesada&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Millisecond&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;func&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;file&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;_&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;os&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;data.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;reader&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;csv&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;NewReader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;file&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;records&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;_&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;reader&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;ReadAll&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;jobs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;make&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;chan&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;&lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;records&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;wg&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;WaitGroup&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="c1"&gt;// Criamos 100 workers (goroutines) leves&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;w&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;wg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="k"&gt;go&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;worker&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nx"&gt;wg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;_&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;record&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;:=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;range&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;records&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="w"&gt;        &lt;/span&gt;&lt;span class="nx"&gt;jobs&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;-&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;record&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nb"&gt;close&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;jobs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;wg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Wait&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="w"&gt;    &lt;/span&gt;&lt;span class="nx"&gt;fmt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Printf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Go terminou em: %v\n&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nx"&gt;time&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;Since&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="c1"&gt;// Nota: Com 100 workers, o tempo cai drasticamente para ~1-2 segundos.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Depois de rodar ambos os códigos, a diferença é clara: o Go processa 100.000 registros em segundos, enquanto o Python leva minutos. Este é o poder do Go para tarefas de alta performance na Engenharia de Dados.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stay safe, stay at home-office!&lt;/strong&gt;&lt;/p&gt;</content><category term="Data Engineering"/><category term="data engineering"/><category term="golang"/><category term="cloud-native"/><category term="performance"/><category term="python"/><category term="arquitetura"/></entry></feed>
