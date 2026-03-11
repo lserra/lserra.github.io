@@ -78,6 +78,19 @@ inv build
 Se a sua branch do Pages for `main` em vez de `master`, ajuste
 `github_pages_branch` em `tasks.py`.
 
+## Cheat sheet (rotina de publicação)
+
+Use estes 6 comandos no fluxo diário (trabalho em `source`, deploy automático via GitHub Actions):
+
+```bash
+inv build
+inv serve
+git status
+git add .
+git commit -m "novo artigo: <titulo>"
+git push origin source
+```
+
 ## CI/CD (GitHub Actions)
 
 O deploy automático foi migrado do Travis CI para GitHub Actions.
