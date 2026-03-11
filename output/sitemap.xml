@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lserra.github.io/</loc>
-<lastmod>2026-03-11T00:34:10-00:00</lastmod>
+<lastmod>2026-03-11T07:31:58-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tags.html</loc>
-<lastmod>2026-03-11T00:34:10-00:00</lastmod>
+<lastmod>2026-03-11T07:31:58-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/categories.html</loc>
-<lastmod>2026-03-11T00:34:10-00:00</lastmod>
+<lastmod>2026-03-11T07:31:58-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/authors.html</loc>
-<lastmod>2026-03-11T00:34:10-00:00</lastmod>
+<lastmod>2026-03-11T07:31:58-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/archives.html</loc>
-<lastmod>2026-03-11T00:34:10-00:00</lastmod>
+<lastmod>2026-03-11T07:31:58-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -53,8 +53,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://lserra.github.io/2026/03/data-eng/</loc>
-<lastmod>2026-03-15T00:00:00-03:00</lastmod>
+<loc>https://lserra.github.io/2026/03/high-performance-data-eng-go/</loc>
+<lastmod>2026-03-15T09:00:00-03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -89,7 +89,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lserra.github.io/category/data-engineering.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -109,50 +109,71 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://lserra.github.io/tag/data-engineering.html</loc>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/tag/golang.html</loc>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/tag/cloud-native.html</loc>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/tag/performance.html</loc>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/tag/python.html</loc>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://lserra.github.io/tag/arquitetura.html</loc>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://lserra.github.io/tag/static.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tag/site.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tag/pelican.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://lserra.github.io/tag/markdown.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://lserra.github.io/tag/data-engineering.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://lserra.github.io/tag/code.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://lserra.github.io/tag/go.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
+<lastmod>2020-11-13T00:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -180,7 +201,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://lserra.github.io/author/laercio-serra.html</loc>
-<lastmod>2026-03-15T00:00:00-03:06</lastmod>
+<lastmod>2026-03-15T09:00:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

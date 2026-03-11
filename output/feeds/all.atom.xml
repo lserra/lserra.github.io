@@ -1,65 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Good Combination</title><link href="https://lserra.github.io/" rel="alternate"/><link href="https://lserra.github.io/feeds/all.atom.xml" rel="self"/><id>https://lserra.github.io/</id><updated>2026-03-15T00:00:00-03:00</updated><subtitle>Matemática, dados e código</subtitle><entry><title>High Performance Data Engineering</title><link href="https://lserra.github.io/2026/03/data-eng/" rel="alternate"/><published>2026-03-15T00:00:00-03:00</published><updated>2026-03-15T00:00:00-03:00</updated><author><name>Laercio Serra</name></author><id>tag:lserra.github.io,2026-03-15:/2026/03/data-eng/</id><summary type="html">&lt;p&gt;Golang (Go) para Engenharia de Dados de Alto Desempenho&lt;/p&gt;</summary><content type="html">&lt;h1&gt;What's the idea?&lt;/h1&gt;
-&lt;p&gt;Hoje eu irei falar da linguagem de programação Golang (Go) e como ela pode ser estrategicamente utilizada para construir sistemas de engenharia de dados de 
-alto desempenho, especialmente em arquiteturas cloud-native.
-Mas &lt;strong&gt;não&lt;/strong&gt; é utilizada (ainda), porque o seu ecossistema é pequeno (ainda), se comparado com o ecossistema do Python. 
-Porém, isso não significa que não seja possível usar esta linguagem de programação neste universo.
-E quando pensamos ou falamos em engenharia de dados de alto desempenho, esta deveria ser a nossa primeira opção. 
-Na verdade Go, se apresenta como uma escolha robusta para data pipelines e sistemas modernos devido às suas forças inerentes em &lt;strong&gt;concorrência, eficiência e 
-baixo consumo de recursos&lt;/strong&gt;. Seus principais achados incluem ganhos significativos de desempenho e a redução de custos operacionais em implantações na nuvem. 
-Podemos dizer que Go é idealmente posicionado como um &lt;strong&gt;motor de alta performance&lt;/strong&gt; dentro de uma arquitetura de dados poliglota (complementando linguagens como Python 
-para tarefas especializadas).
-E hoje, esta é a ideia que eu quero apresentar ou passar neste post.&lt;/p&gt;
-&lt;h1&gt;Quick Overview&lt;/h1&gt;
-&lt;p&gt;Para um melhor entendimento, antes eu vou falar do cenário em evolução da Engenharia de Dados e uma possível ascensão do Golang.
-A engenharia de dados é impulsionada pela escalada do volume, velocidade e variedade de dados (Big Data), exigindo processamento em tempo real, escalabilidade e 
-eficiência de custos. O Go, é uma linguagem compilada e tipada estaticamente desenvolvida no Google, foi concebida com simplicidade e eficiência, alinhando-se 
-perfeitamente com o "imperativo de desempenho" do setor. Um exemplo notável de caso de uso (projeto de cidade inteligente) em que demonstrou uma &lt;strong&gt;redução de 90% na 
-latência de processamento e 60% nos custos de infraestrutura de nuvem&lt;/strong&gt; após a migração de processos ETL de Python para Go.&lt;/p&gt;
-&lt;h1&gt;Go Attributes&lt;/h1&gt;
-&lt;p&gt;Podemos destacar alguns atributos da linguagem Go que vão de encontro à Excelência em Engenharia de Dados:&lt;/p&gt;
-&lt;h2&gt;Desempenho: Compilação, Velocidade e Eficiência&lt;/h2&gt;
-&lt;p&gt;Como uma linguagem compilada, o Go se traduz diretamente em código de máquina, resultando em velocidades de execução superiores para tarefas que exigem muita CPU. 
-Sua eficiência se traduz em uma menor pegada de memória e menor uso de CPU, o que impacta diretamente a capacidade de usar instâncias de nuvem menores ou em menor 
-número, diminuindo os custos operacionais.&lt;/p&gt;
-&lt;h2&gt;Concorrência: Goroutines, Channels e Processamento Paralelo&lt;/h2&gt;
-&lt;p&gt;A linguagem Go, também se destaca pelo seu suporte embutido à concorrência através de goroutines (funções leves e concorrentes) e channels (canais tipados para 
-comunicação e sincronização). Esse modelo é perfeitamente adequado para tarefas I/O-bound (como leitura de múltiplas fontes de dados) e para a criação de pipelines
-distribuídos e robustos, evitando falhas comuns associadas à memória compartilhada.&lt;/p&gt;
-&lt;h2&gt;Simplicidade e Legibilidade: Impacto no Desenvolvimento e Manutenção&lt;/h2&gt;
-&lt;p&gt;Com uma sintaxe concisa (apenas 25 palavras-chave) e uma biblioteca padrão abrangente, o Golang oferece uma curva de aprendizado relativamente suave. 
-Sua simplicidade e código explícito facilitam a leitura e a manutenção de plataformas de dados de grande escala e longa duração, priorizando a produtividade da 
-equipe e a consistência do código.&lt;/p&gt;
-&lt;h2&gt;Tipagem Estática e Tratamento de Erros: Construindo Sistemas de Dados Robustos&lt;/h2&gt;
-&lt;p&gt;O sistema de tipagem estática do Go permite que classes de erros sejam detectadas durante a compilação. Seu mecanismo de tratamento de erros explícito 
-(funções retornam um valor de erro que deve ser verificado, ex: if err != nil) força os desenvolvedores a considerar e endereçar conscientemente as falhas, 
-aumentando a robustez dos sistemas de dados em produção.&lt;/p&gt;
-&lt;h2&gt;Pegada de Recurso: Implicações para Custo e Escalabilidade&lt;/h2&gt;
-&lt;p&gt;As aplicações Go têm um consumo modesto de recursos, o que é uma grande vantagem em ambientes de nuvem onde o uso de recursos está ligado ao custo. 
-A capacidade de compilar para um único binário estaticamente ligado simplifica drasticamente o processo de implantação, acelera a construção de imagens de 
-contêineres (Docker) e facilita a orquestração em plataformas como Kubernetes.&lt;/p&gt;
-&lt;h1&gt;Golang vs. Python&lt;/h1&gt;
-&lt;p&gt;Como mencionado anteriormente, embora o Python continue a dominar a Engenharia/Ciência de Dados devido ao seu vasto ecossistema, o Golang é a alternativa mais 
-convincente quando os requisitos são desempenho bruto e concorrência para a infraestrutura subjacente de dados.&lt;/p&gt;
-&lt;h1&gt;High Performance Pipelines (ETL/ELT)&lt;/h1&gt;
-&lt;p&gt;As concorrências (data race) do Go são ideais para pipelines ETL/ELT, utilizando goroutines para processamento paralelo e channels para gerenciar o fluxo de 
-dados entre estágios (fan-in e fan-out). O gerenciamento cuidadoso de alocação de memória e o uso de canais Go simples (em vez de sistemas complexos de filas) 
-podem otimizar o fluxo de dados e a manutenibilidade.&lt;/p&gt;
-&lt;p&gt;O ecossistema para tarefas de engenharia de dados (serialização de dados, bancos de dados, filas de mensagens) é robusto. 
-O Go se integra bem com AWS, GCP e Azure, oferecendo SDKs maduros. Sua força estratégica é construir componentes personalizados e de alto desempenho (como agentes 
-de ingestão ou microsserviços de processamento) que aumentam ou se integram com serviços de dados gerenciados da nuvem (ex: S3, BigQuery, Kinesis, Pub/Sub), em vez
-de tentar replicar funcionalidades de grandes serviços gerenciados como AWS Glue, GCP Dataflow ou Azure Data Factory.&lt;/p&gt;
-&lt;h1&gt;The Future (Big Data, AI/ML)&lt;/h1&gt;
-&lt;p&gt;Se você percebe que existe na sua organização, a necessidade de que para obter resultados extraordinários é necessário mudar de paradigma, eu sugiro que a adoção
-seja incremental e focada em problemas. Recomendo começar com um gargalo específico, construir Proof-of-Concepts (PoCs) para benchmark. Depois investir 
-em treinamento e garantir a integração incremental com sistemas existentes usando interfaces padronizadas (REST APIs, gRPC, filas de mensagens).&lt;/p&gt;
-&lt;p&gt;Embora não seja, atualmente, a principal linguagem de treinamento de modelos de IA/ML (pois o domínio é do Python), o Go aos poucos está ganhando terreno em:
-- &lt;strong&gt;Serviço de Inferência de ML&lt;/strong&gt;: sua alta performance e baixa latência o tornam excelente para a implantação de servidores de inferência de modelos em tempo real.
-- &lt;strong&gt;Pré-processamento de Dados&lt;/strong&gt;: oferece ganhos significativos de velocidade para tarefas intensivas de pré-processamento e engenharia de features para grandes conjuntos de dados.
-- &lt;strong&gt;Ferramentas de Infraestrutura&lt;/strong&gt;: continua sendo a linguagem dominante em ferramentas de infraestrutura cloud-native (Docker, Kubernetes, Prometheus).&lt;/p&gt;
-&lt;p&gt;Este é um artigo introdutório, sobre as minhas descobertas desta linguagem, aplicada no campo da Engenharia de Dados. E nos próximos artigos, eu trarei mais detalhes 
-sobre o uso prático e os resultados obtidos, com esta linguagem de programação.&lt;/p&gt;
-&lt;p&gt;Stay safe, stay at home-office!&lt;/p&gt;</content><category term="Data Engineering"/><category term="static"/><category term="site"/><category term="pelican"/><category term="markdown"/><category term="data engineering"/><category term="code"/><category term="go"/></entry><entry><title>Working Remotely</title><link href="https://lserra.github.io/2020/11/home-office/" rel="alternate"/><published>2020-11-13T00:00:00-03:00</published><updated>2020-11-13T00:00:00-03:00</updated><author><name>Laercio Serra</name></author><id>tag:lserra.github.io,2020-11-13:/2020/11/home-office/</id><summary type="html">&lt;p&gt;É preciso se adaptar às mudanças e adquirir novos hábitos&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Home-Office: Is Bad or Good?&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Good Combination</title><link href="https://lserra.github.io/" rel="alternate"/><link href="https://lserra.github.io/feeds/all.atom.xml" rel="self"/><id>https://lserra.github.io/</id><updated>2026-03-15T09:00:00-03:00</updated><subtitle>Matemática, dados e código</subtitle><entry><title>Engenharia de Dados de Alta Performance: O Caso do Golang</title><link href="https://lserra.github.io/2026/03/high-performance-data-eng-go/" rel="alternate"/><published>2026-03-15T09:00:00-03:00</published><updated>2026-03-15T09:00:00-03:00</updated><author><name>Laercio Serra</name></author><id>tag:lserra.github.io,2026-03-15:/2026/03/high-performance-data-eng-go/</id><summary type="html">&lt;p&gt;Por que o Go está se tornando o motor de eficiência para arquiteturas de dados modernas e cloud-native.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Além do Óbvio: Por que falar de Go em um mundo Python?&lt;/h1&gt;
+&lt;p&gt;Na engenharia de dados moderna, dominar o ecossistema Python é o requisito básico. No entanto, o diferencial do especialista está em identificar quando essa flexibilidade se torna um gargalo. Hoje, apresento o &lt;strong&gt;Golang (Go)&lt;/strong&gt; não como um substituto, mas como o motor estratégico para sistemas de dados de alto desempenho, especialmente em infraestruturas &lt;em&gt;cloud-native&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Embora o ecossistema de bibliotecas analíticas do Python seja vasto, o Go brilha onde o Python muitas vezes hesita: na &lt;strong&gt;concorrência massiva, eficiência de memória e baixo consumo de recursos&lt;/strong&gt;. O Go não é apenas uma linguagem; é uma escolha arquitetural para quem busca reduzir latência e custos operacionais.&lt;/p&gt;
+&lt;h1&gt;O Imperativo da Performance&lt;/h1&gt;
+&lt;p&gt;O cenário atual é implacável: o volume e a velocidade dos dados exigem processamento em tempo real e escalabilidade financeiramente sustentável. O Go, desenvolvido pelo Google com foco em simplicidade e execução, alinha-se ao que chamo de "imperativo de desempenho".&lt;/p&gt;
+&lt;p&gt;Um exemplo real e impactante é o caso de uso em projetos de &lt;em&gt;Smart Cities&lt;/em&gt;: a migração de componentes críticos de ETL de Python para Go resultou em uma &lt;strong&gt;redução de 90% na latência de processamento&lt;/strong&gt; e uma &lt;strong&gt;economia de 60% na fatura de nuvem&lt;/strong&gt;. O Go se posiciona como o "motor turbo" em uma arquitetura poliglota.&lt;/p&gt;
+&lt;h1&gt;Os Pilares da Excelência com Go&lt;/h1&gt;
+&lt;p&gt;Para entender por que o Go é a primeira opção para engenharia de alta performance, precisamos olhar para seus atributos fundamentais:&lt;/p&gt;
+&lt;h2&gt;1. Desempenho Binário e Eficiência&lt;/h2&gt;
+&lt;p&gt;Como linguagem compilada, o Go traduz-se diretamente em código de máquina. Isso elimina o overhead de interpretação, resultando em menor pegada de memória e menor uso de CPU. Na nuvem, isso significa rodar as mesmas cargas de trabalho em instâncias significativamente menores.&lt;/p&gt;
+&lt;h2&gt;2. Concorrência Nativa (Goroutines)&lt;/h2&gt;
+&lt;p&gt;Diferente de outras linguagens que dependem de threads pesadas do SO, o Go introduz as &lt;strong&gt;Goroutines&lt;/strong&gt; e os &lt;strong&gt;Channels&lt;/strong&gt;. Este modelo é ideal para tarefas &lt;em&gt;I/O-bound&lt;/em&gt;, permitindo que um único serviço gerencie milhares de conexões de entrada e saída simultaneamente sem o risco de &lt;em&gt;data races&lt;/em&gt; comuns em memória compartilhada.&lt;/p&gt;
+&lt;h2&gt;3. Robustez e Tipagem Estática&lt;/h2&gt;
+&lt;p&gt;O sistema de tipos do Go detecta erros estruturais em tempo de compilação, e seu mecanismo explícito de tratamento de erros (&lt;code&gt;if err != nil&lt;/code&gt;) força o desenvolvedor a construir sistemas resilientes. Em produção, isso se traduz em pipelines que não "quebram silenciosamente".&lt;/p&gt;
+&lt;h2&gt;4. Agilidade no Deployment&lt;/h2&gt;
+&lt;p&gt;A capacidade de compilar toda a aplicação em um &lt;strong&gt;único binário estático&lt;/strong&gt; simplifica o ciclo de CI/CD. Imagens Docker tornam-se mínimas (distroless), acelerando o tempo de deploy e facilitando a orquestração em Kubernetes.&lt;/p&gt;
+&lt;h1&gt;Arquitetura Poliglota: Go vs. Python&lt;/h1&gt;
+&lt;p&gt;Não se trata de uma guerra de linguagens. Enquanto o Python domina a camada de ciência de dados e transformações complexas, o Go é a alternativa superior para a &lt;strong&gt;infraestrutura subjacente&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;O Go não tenta replicar serviços gerenciados como AWS Glue ou GCP Dataflow; ele é usado para construir &lt;strong&gt;componentes personalizados de alto impacto&lt;/strong&gt; — como agentes de ingestão e microsserviços de enriquecimento — que aumentam a eficiência desses serviços.&lt;/p&gt;
+&lt;h1&gt;Infraestrutura Subjacente&lt;/h1&gt;
+&lt;p&gt;Quando falamos de infraestrutura subjacente (ou underlying infrastructure), estamos nos referindo aos alicerces, as "engrenagens" invisíveis que sustentam o dado antes mesmo dele chegar no seu banco de dados ou no seu modelo de Machine Learning.&lt;/p&gt;
+&lt;p&gt;Imagine um prédio: o acabamento, a decoração e o design dos apartamentos (onde o valor é percebido pelo morador). A infraestrutura subjacente é a fundação, o encanamento, a rede elétrica e os elevadores. Sem eles, o prédio não funciona, por mais bonito que seja.&lt;/p&gt;
+&lt;p&gt;Na prática da Engenharia de Dados, isso se traduz em:&lt;/p&gt;
+&lt;h2&gt;1. Ingestão e Conectores&lt;/h2&gt;
+&lt;p&gt;É o componente que fica na "ponta" do sistema. Ele precisa escutar milhares de fontes (Websockets, APIs, sensores IoT) simultaneamente.&lt;/p&gt;
+&lt;p&gt;Por que Go aqui? Porque você precisa de alta concorrência para manter milhares de conexões abertas sem consumir gigabytes de RAM.&lt;/p&gt;
+&lt;h2&gt;2. Buffering e Mensageria&lt;/h2&gt;
+&lt;p&gt;Componentes que gerenciam filas e garantem que o dado não se perca se o banco de dados cair. É a "caixa d'água" do seu sistema.&lt;/p&gt;
+&lt;p&gt;Exemplo: Um agente que lê do Kafka e faz um checkpoint de segurança. Se esse componente for lento (gargalo), todo o pipeline atrasa.&lt;/p&gt;
+&lt;h2&gt;3. Proxy de Dados e Gateways&lt;/h2&gt;
+&lt;p&gt;Muitas vezes, você precisa de uma camada que valide se o dado que está entrando está no formato correto (Schema Validation) antes de salvá-lo.&lt;/p&gt;
+&lt;p&gt;A vantagem do Go: Como o Go é tipado e compilado, ele valida esses campos na velocidade da luz, descartando lixo antes que ele polua seu Data Lake.&lt;/p&gt;
+&lt;h2&gt;4. Serialização e Deserialização&lt;/h2&gt;
+&lt;p&gt;O processo de transformar dados brutos (JSON) em formatos binários eficientes (Parquet, Avro, Protobuf).&lt;/p&gt;
+&lt;p&gt;O custo: Essa é uma das tarefas que mais exige CPU. O Go faz isso de forma extremamente eficiente, permitindo que você processe arquivos gigantescos em segundos, enquanto o Python levaria minutos.&lt;/p&gt;
+&lt;h2&gt;5. Sidecars e Observabilidade&lt;/h2&gt;
+&lt;p&gt;São pequenos programas que rodam ao lado dos seus jobs principais para monitorar se tudo está bem, coletar logs e métricas.&lt;/p&gt;
+&lt;p&gt;O "Footprint": Você não quer que o monitor (Sidecar) consuma mais memória que o processo principal. Por isso, quase todas as ferramentas modernas de infraestrutura (Docker, Kubernetes, Prometheus) são escritas em Go.&lt;/p&gt;
+&lt;h1&gt;O Futuro: IA, Big Data e Além&lt;/h1&gt;
+&lt;p&gt;Se sua organização enfrenta gargalos de performance, a adoção do Go deve ser incremental e focada em problemas específicos (PoCs). O horizonte para a linguagem é promissor:
+- &lt;strong&gt;ML Inference:&lt;/strong&gt; Excelente para servir modelos em tempo real com baixa latência.
+- &lt;strong&gt;Data Pre-processing:&lt;/strong&gt; Ganho de velocidade massivo na engenharia de &lt;em&gt;features&lt;/em&gt; para datasets gigantescos.
+- &lt;strong&gt;Infraestrutura:&lt;/strong&gt; Consolidação como a linguagem padrão de ferramentas como Docker, Kubernetes e Prometheus.&lt;/p&gt;
+&lt;p&gt;Este é apenas o início da minha jornada explorando o potencial do Go na Engenharia de Dados. Nos próximos artigos, trarei detalhes técnicos e implementações práticas para provar que, às vezes, para ir mais longe, é preciso mudar o motor.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stay safe, stay at home-office!&lt;/strong&gt;&lt;/p&gt;</content><category term="Data Engineering"/><category term="data engineering"/><category term="golang"/><category term="cloud-native"/><category term="performance"/><category term="python"/><category term="arquitetura"/></entry><entry><title>Working Remotely</title><link href="https://lserra.github.io/2020/11/home-office/" rel="alternate"/><published>2020-11-13T00:00:00-03:00</published><updated>2020-11-13T00:00:00-03:00</updated><author><name>Laercio Serra</name></author><id>tag:lserra.github.io,2020-11-13:/2020/11/home-office/</id><summary type="html">&lt;p&gt;É preciso se adaptar às mudanças e adquirir novos hábitos&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Home-Office: Is Bad or Good?&lt;/h1&gt;
 &lt;p&gt;O trabalho remoto sempre foi algo que eu desejei em minha vida profissional em condições normais. Não algo assim de repente e sob condições de extrema necessidade.
 Mas, apesar das circunstâncias, está sendo uma experiência ótima e muito gratificante. Apesar do isolamento social que estamos vivenciando, percebo que eu sou mais produtivo.
 E o meu tempo é mais bem aproveitado. O home-office tem as suas vantagens e desvantagens. (Eu listo algumas abaixo)

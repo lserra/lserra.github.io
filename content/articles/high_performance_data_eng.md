@@ -89,4 +89,86 @@ Se sua organização enfrenta gargalos de performance, a adoção do Go deve ser
 
 Este é apenas o início da minha jornada explorando o potencial do Go na Engenharia de Dados. Nos próximos artigos, trarei detalhes técnicos e implementações práticas para provar que, às vezes, para ir mais longe, é preciso mudar o motor.
 
+# Apêndice Técnico:
+
+Vamos imaginar um cenário muito comum na Engenharia de Dados (processamento concorrente de dados): ler um arquivo CSV grande, processar cada linha e simular um envio para uma API ou Banco de Dados.
+
+O objetivo é processar 100.000 registros. Enquanto o Python processa sequencialmente (ou exige bibliotecas complexas para paralelismo real), o Go faz isso de forma nativa e extremamente leve.
+
+## 1. Implementação em Python
+
+Usa o modelo sequencial. Para paralelizar, o custo de memória seria alto devido ao multiprocessing.
+
+```python
+import csv
+import time
+
+def process_row(row):
+    # Simula uma tarefa pesada (ex: validação ou hash)
+    time.sleep(0.001) 
+    return True
+
+def run_pipeline():
+    start = time.time()
+    with open('data.csv', 'r') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            process_row(row)
+    
+    print(f"Python terminou em: {time.time() - start:.2f} segundos")
+
+# Nota: Processar 100k linhas levaria ~100/200 segundos aqui.
+```
+
+## 2. Implementação em Go (o motor Turbo)
+
+Usa o padrão Worker Pool com Goroutines. Aqui, processamos múltiplas linhas simultaneamente sem sobrecarregar o sistema.
+
+```go
+package main
+
+import (
+	"encoding/csv"
+	"fmt"
+	"os"
+	"sync"
+	"time"
+)
+
+func worker(jobs <-chan []string, wg *sync.WaitGroup) {
+	defer wg.Done()
+	for range jobs {
+		// Simula a mesma tarefa pesada
+		time.Sleep(1 * time.Millisecond)
+	}
+}
+
+func main() {
+	file, _ := os.Open("data.csv")
+	reader := csv.NewReader(file)
+	records, _ := reader.ReadAll()
+
+	start := time.Now()
+	jobs := make(chan []string, len(records))
+	var wg sync.WaitGroup
+
+	// Criamos 100 workers (goroutines) leves
+	for w := 1; w <= 100; w++ {
+		wg.Add(1)
+		go worker(jobs, &wg)
+	}
+
+	for _, record := range records {
+		jobs <- record
+	}
+	close(jobs)
+	wg.Wait()
+
+	fmt.Printf("Go terminou em: %v\n", time.Since(start))
+}
+// Nota: Com 100 workers, o tempo cai drasticamente para ~1-2 segundos.
+````
+
+
+
 **Stay safe, stay at home-office!**
