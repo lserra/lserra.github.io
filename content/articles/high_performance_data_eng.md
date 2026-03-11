@@ -8,11 +8,11 @@ Tags: static, site, pelican, markdown, data engineering, code, go
 Authors: Laercio Serra
 Status: published
 
-# Whats the idea?
+# What's the idea?
 
-Hoje eu irei falar da linguagem de programação Golang (Go) e como ela pode ser estrategicamente utilizado para construir sistemas de engenharia de dados de 
+Hoje eu irei falar da linguagem de programação Golang (Go) e como ela pode ser estrategicamente utilizada para construir sistemas de engenharia de dados de 
 alto desempenho, especialmente em arquiteturas cloud-native.
-Mas **não** é utilizado (ainda), porque o seu ecossitema é pequeno (ainda), se comparado com o ecossistema do Python. 
+Mas **não** é utilizada (ainda), porque o seu ecossistema é pequeno (ainda), se comparado com o ecossistema do Python. 
 Porém, isso não significa que não seja possível usar esta linguagem de programação neste universo.
 E quando pensamos ou falamos em engenharia de dados de alto desempenho, esta deveria ser a nossa primeira opção. 
 Na verdade Go, se apresenta como uma escolha robusta para data pipelines e sistemas modernos devido às suas forças inerentes em **concorrência, eficiência e 

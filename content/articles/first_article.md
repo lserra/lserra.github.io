@@ -37,7 +37,7 @@ Este novo blog (Good Combination), foi criado usando o [Pelican](https://github.
 
 E o melhor: é tudo free, tudo open-source!
 
-Então, seja benvindo e até o próximo post ...
+Então, seja bem-vindo e até o próximo post ...
 
 
 
