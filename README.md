@@ -1,92 +1,119 @@
 # Good Combination
-[![Build Status](https://travis-ci.org/lserra/lserra.github.io.svg?branch=source)](https://travis-ci.org/lserra/lserra.github.io)
 
-good_combination = { m, d, c }
+`good_combination = { m, d, c }`
 
-Ideas and thoughts about mathematics, data, coding. It's a good combination!
+Blog pessoal sobre matematica, dados e codigo.
 
-Stay in touch with me.
+Este repositorio contem o codigo-fonte de https://lserra.github.io, gerado com
+[Pelican](https://getpelican.com/) e com tema [Flex](https://github.com/alexandrevicenzi/Flex).
 
-Register in our site and receive our feeds.
+## Tecnologias
 
-## A professional and personal blog
+- Python 3 + Pelican
+- Pelican plugins (`pelican-plugins/`)
+- Automacao de tarefas com Invoke (`tasks.py`)
+- Publicacao no GitHub Pages com `ghp-import`
 
-This repository hosts the code for my [blog](https://lserra.github.io/).
+## Inicio rapido
 
-The website is powered by [Pelican](http://getpelican.com/) — a static site generator written in Python — and uses a theme based on [Flex](https://github.com/alexandrevicenzi/Flex.git).
+Se voce ja criou e selecionou o virtualenv na IDE, execute:
 
-### Build locally
-
-The easiest way to do this in a Python is using [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
-
-### Create a Virtual Environment
-
-Once you have `virtualenv` installed, create a virtual environment to hold Pelican and its dependencies:
-
-```shell
-$ virtualenv venv
-$ source venv/bin/activate
+```bash
+pip install -r requirements.txt
+python -m invoke --list
 ```
 
-This creates a virtual environment and then activates it. If you want to exit the virtual environment, type:
+## Comandos do dia a dia (Invoke)
 
-```shell
-$ deactivate
+Este projeto usa `inv`/Invoke no lugar dos comandos antigos com `fab`.
+
+```bash
+inv clean       # remove os arquivos gerados em output/
+inv build       # gera a versao de desenvolvimento
+inv rebuild     # clean + build
+inv regenerate  # monitora arquivos e regenera ao detectar mudancas
+inv serve       # build + servidor com live reload na porta :8000
+inv reserve     # alias para serve
+inv preview     # build com publishconf.py
+inv publish     # build + publicacao na branch do GitHub Pages
 ```
 
-### Fork / Clone the Repo
+Acesse http://localhost:8000 apos `inv serve`.
 
-If you haven't already, clone your version of the repo:
+## Estrutura do projeto
 
-```shell
-$ git clone --recurse-submodules https://github.com/yourusername/repo/fork
+- `content/articles/`: posts do blog
+- `content/pages/`: paginas estaticas (sobre, contato etc.)
+- `content/images/`: imagens usadas por posts/paginas
+- `output/`: site gerado (seguro recriar)
+- `pelicanconf.py`: configuracao principal (desenvolvimento/padrao)
+- `publishconf.py`: ajustes de producao
+- `tasks.py`: ponto de entrada das tarefas Invoke
+
+## Atualizar links sociais (incluindo LinkedIn)
+
+Os links de perfis sociais ficam em `pelicanconf.py`, no bloco `SOCIAL`.
+
+Para atualizar o LinkedIn, edite este item:
+
+```python
+('linkedin', 'https://www.linkedin.com/in/<your-profile>/'),
 ```
 
-### Install Pelican & Dependancies
+Em seguida, gere o site novamente:
 
-Use `pip` to install the list of dependencies (including Pelican) into your virtual environment:
-
-```shell
-$ pip install -r requirements.txt
+```bash
+inv build
 ```
 
-### Generate the Website
+## Fluxo de publicacao
 
-Now that the dependencies exists, we can build:
+`inv publish` executa:
 
-```shell
-$ fab build
-```
+1. limpa `output/`
+2. gera com `publishconf.py`
+3. executa `ghp-import`
+4. faz push para a branch configurada (`master` em `tasks.py`)
 
-This takes the Markdown files from the `content/` directory and generates static HTML pages inside the `output/` directory. That's it. No database required.
+Se a sua branch do Pages for `main` em vez de `master`, ajuste
+`github_pages_branch` em `tasks.py`.
 
-### Preview the Website
+## CI/CD (GitHub Actions)
 
-You can serve the generated site so it can be previewed in your browser:
+O deploy automatico foi migrado do Travis CI para GitHub Actions.
 
-```shell
-$ fab serve
-```
+- Workflow: `.github/workflows/pelican-pages.yml`
+- Build: executa em `push` e `pull_request` na branch `source`
+- Deploy: executa apenas em `push` na branch `source`, usando `python -m invoke publish`
 
-And you can see the blog if you visit [http://localhost:8000](http://localhost:8000).
+Configuracao recomendada no GitHub Pages:
 
-## Blog Workflow
+- Source: `Deploy from a branch`
+- Branch: `master`
+- Folder: `/ (root)`
 
-If you're interested in writing a blog post for the website, you need to:
+## Solucao de problemas
 
-- [Fork]() the repository
-- Write a blog post using Markdown in the `content` directory
-- Push the changes to a topic branch, like `an-example-article`, on *your* fork of the repository
-- Make a [pull request](https://help.github.com/articles/using-pull-requests/) against the `source` branch
+- `Unresolved reference 'invoke'` na IDE:
+  garanta que o interpretador selecionado e o virtualenv do projeto e execute
+  `pip install -r requirements.txt`.
+- `inv: command not found`:
+  use `python -m invoke <task>` em vez de `inv`.
+- Comando do Pelican ausente durante tarefas:
+  confirme que as dependencias foram instaladas no virtualenv ativo.
 
-### Hosting
+## Notas de legado
 
-This blog is hosted by [GitHub Pages](https://pages.github.com/). Also, I'm using continuous integration with [Travis](https://travis-ci.org) builds the site everytime the source is updated.
+- `fabfile.py` existe por compatibilidade historica, mas o fluxo recomendado
+  e `tasks.py` + Invoke.
+- `fab` e bloqueado por design neste repositorio para evitar uso acidental de
+  automacao depreciada; use os comandos `inv`.
 
-### License
+## Licenca
 
-The source code for generation of the blog is under [MIT License](https://github.com/ayushkumarshah/ayushkumarshah.github.io/blob/source/LICENSE.md). Content is copyrighted.
+O codigo-fonte esta sob licenca MIT (veja o arquivo de licenca do projeto).
+O conteudo do blog permanece protegido por direitos autorais do autor.
 
-## Contact
+## Contato
 
-If you have any questions, you can [email](mailto:laercio.serra@gmail.com) me.
+- Email: `laercio.serra@gmail.com`

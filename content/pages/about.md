@@ -1,17 +1,18 @@
-Title: About Me
+Title: Sobre mim
 Date: 2020-05-17 00:00
 Modified: 2020-05-17 00:00
+Slug: about-me
 
-My name is Laercio, I am a data engineer with know-how and expertise in math, data, and coding.
+Meu nome e Laercio. Sou engenheiro de dados, com experiencia em matematica, dados e codigo.
 
-Currently, I'm working and living in the City of Rio de Janeiro, Brazil. When I am not with my family or my friends, I am programming, analyzing datasets, or studying mathematics. When I am not doing it all, I am listening to music, riding a bike/motorcycle, reading a book, drawing, or painting anything.
+Atualmente, moro e trabalho no Rio de Janeiro, Brasil. Quando nao estou com minha familia ou amigos, costumo programar, analisar dados e estudar matematica. Fora isso, gosto de ouvir musica, andar de bicicleta ou moto, ler, desenhar e pintar.
 
-Nowadays, the volume of data produced by organizations is increasing year-by-year and these data are available or structured in many formats to be used in many forms with many tools.
+Hoje, o volume de dados produzido por organizacoes cresce ano a ano. Esses dados ficam disponiveis em varios formatos e podem ser usados de muitas formas, com diferentes ferramentas.
 
-Really, this is a too complex matrix: **[**  _data x form x tool_  **]**.
+De fato, essa e uma matriz complexa: **[** _dados x forma x ferramenta_ **]**.
 
-And I have another blog (the oldest blog), with a lot of information where I write about data engineering and data analytics related to BI and Big Data projects: [BI na Prática](http://binapratica.blogspot.com/).
+Tambem tenho outro blog (o mais antigo), com bastante conteudo sobre engenharia de dados e analise de dados aplicada a projetos de BI e Big Data: [BI na Pratica](http://binapratica.blogspot.com/).
 
-In the future, this blog will be deactivated. I'm working on the migration to this new blog.
+No futuro, esse blog antigo sera desativado. Estou trabalhando na migracao para este novo blog.
 
-Thank you for visiting my blog!
+Obrigado por visitar meu blog!

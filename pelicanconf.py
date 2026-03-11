@@ -11,8 +11,8 @@ FEED_DOMAIN = SITEURL
 HTTPS = True
 SITENAME = 'Good Combination'
 SITETITLE = '{ m, d, c }'
-SITESUBTITLE = 'Math, Data, and Code'
-SITEDESCRIPTION = "Ideas and Thoughts surround the Mathematics, Data, and Programming"
+SITESUBTITLE = 'Matemática, dados e código'
+SITEDESCRIPTION = 'Ideias e reflexões sobre matemática, dados e programação'
 SITELOGO = '/images/profile.png'
 # FAVICON = '/images/favicon.ico'
 ROBOTS = "index, follow"
@@ -26,7 +26,7 @@ DISQUS_SITENAME = 'goodcombination'
 
 THEME = 'themes/Flex'
 TIMEZONE = 'America/Sao_Paulo'
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = 'pt-BR'
 PLUGINS = ['sitemap', 'post_stats', 'feed_summary']
 
 PATH = 'content'
@@ -63,7 +63,7 @@ MONTH_ARCHIVE_SAVE_AS = '{date:%Y}/{date:%m}/index.html'
 FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 FEED_USE_SUMMARY = True
-CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
@@ -73,20 +73,20 @@ AUTHOR_FEED_RSS = None
 MAIN_MENU = True
 
 LINKS = (
-    ('ideas and thoughts', SITEURL),
+    ('ideias e reflexoes', SITEURL),
     ('portfolio', SITEURL),
 )
 
 SOCIAL = (
     # ('envelope', 'mailto:laercio.serra@gmail.com'),
     ('github', 'https://github.com/lserra'),
-    ('linkedin','https://www.linkedin.com/in/laercioserra/'),
-    ('twitter','https://twitter.com/laercio_serra'),
+    ('linkedin','https://www.linkedin.com/in/laerciosserra/'),
+    ('x','https://x.com/laercio_serra'),
 )
 
 MENUITEMS = (
-    ('Archives', '/archives'),
-    ('Categories', '/categories'),
+    ('Arquivos', '/archives'),
+    ('Categorias', '/categories'),
     ('Tags', '/tags')
 )
 

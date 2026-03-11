@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://lserra.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://lserra.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Good Combination Atom">
+
+
+
+  
+
+
+<meta name="author" content="Laercio Serra" />
+<meta name="description" content="Golang (Go) para Engenharia de Dados de Alto Desempenho" />
+<meta name="keywords" content="static, site, pelican, markdown, data engineering, code, go">
+
+
+<meta property="og:site_name" content="Good Combination"/>
+<meta property="og:title" content="High Performance Data Engineering"/>
+<meta property="og:description" content="Golang (Go) para Engenharia de Dados de Alto Desempenho"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://lserra.github.io/2026/03/data-eng/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2026-03-15 00:00:00-03:00"/>
+<meta property="article:modified_time" content="2026-03-15 00:00:00-03:00"/>
+<meta property="article:author" content="https://lserra.github.io/author/laercio-serra.html">
+<meta property="article:section" content="Data Engineering"/>
+<meta property="article:tag" content="static"/>
+<meta property="article:tag" content="site"/>
+<meta property="article:tag" content="pelican"/>
+<meta property="article:tag" content="markdown"/>
+<meta property="article:tag" content="data engineering"/>
+<meta property="article:tag" content="code"/>
+<meta property="article:tag" content="go"/>
+<meta property="og:image" content="/images/profile.png">
+
+  <title>Good Combination &ndash; High Performance Data Engineering</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://lserra.github.io">
+        <img src="/images/profile.png" alt="{ m, d, c }" title="{ m, d, c }">
+      </a>
+
+      <h1>
+        <a href="https://lserra.github.io">{ m, d, c }</a>
+      </h1>
+
+<p>Matemática, dados e código</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/about-me/#about-me">
+                  Sobre mim
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/contact/#contact">
+                  Contato
+                </a>
+              </li>
+
+            <li>
+              <a target="_self" href="https://lserra.github.io" >ideias e reflexoes</a>
+            </li>
+            <li>
+              <a target="_self" href="https://lserra.github.io" >portfolio</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/lserra" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/laerciosserra/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-x" href="https://x.com/laercio_serra" target="_blank">
+              <i class="fab fa-x"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://lserra.github.io">Home</a>
+
+      <a href="/archives">Arquivos</a>
+      <a href="/categories">Categorias</a>
+      <a href="/tags">Tags</a>
+
+      <a href="https://lserra.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="data-eng">High Performance Data Engineering</h1>
+    <p>
+      Posted on Sun 15 March 2026 in <a href="https://lserra.github.io/category/data-engineering.html">Data Engineering</a>
+
+        &#8226; 5 min read
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Whats the idea?</h1>
+<p>Hoje eu irei falar da linguagem de programação Golang (Go) e como ela pode ser estrategicamente utilizado para construir sistemas de engenharia de dados de 
+alto desempenho, especialmente em arquiteturas cloud-native.
+Mas <strong>não</strong> é utilizado (ainda), porque o seu ecossitema é pequeno (ainda), se comparado com o ecossistema do Python. 
+Porém, isso não significa que não seja possível usar esta linguagem de programação neste universo.
+E quando pensamos ou falamos em engenharia de dados de alto desempenho, esta deveria ser a nossa primeira opção. 
+Na verdade Go, se apresenta como uma escolha robusta para data pipelines e sistemas modernos devido às suas forças inerentes em <strong>concorrência, eficiência e 
+baixo consumo de recursos</strong>. Seus principais achados incluem ganhos significativos de desempenho e a redução de custos operacionais em implantações na nuvem. 
+Podemos dizer que Go é idealmente posicionado como um <strong>motor de alta performance</strong> dentro de uma arquitetura de dados poliglota (complementando linguagens como Python 
+para tarefas especializadas).
+E hoje, esta é a ideia que eu quero apresentar ou passar neste post.</p>
+<h1>Quick Overview</h1>
+<p>Para um melhor entendimento, antes eu vou falar do cenário em evolução da Engenharia de Dados e uma possível ascensão do Golang.
+A engenharia de dados é impulsionada pela escalada do volume, velocidade e variedade de dados (Big Data), exigindo processamento em tempo real, escalabilidade e 
+eficiência de custos. O Go, é uma linguagem compilada e tipada estaticamente desenvolvida no Google, foi concebida com simplicidade e eficiência, alinhando-se 
+perfeitamente com o "imperativo de desempenho" do setor. Um exemplo notável de caso de uso (projeto de cidade inteligente) em que demonstrou uma <strong>redução de 90% na 
+latência de processamento e 60% nos custos de infraestrutura de nuvem</strong> após a migração de processos ETL de Python para Go.</p>
+<h1>Go Attributes</h1>
+<p>Podemos destacar alguns atributos da linguagem Go que vão de encontro à Excelência em Engenharia de Dados:</p>
+<h2>Desempenho: Compilação, Velocidade e Eficiência</h2>
+<p>Como uma linguagem compilada, o Go se traduz diretamente em código de máquina, resultando em velocidades de execução superiores para tarefas que exigem muita CPU. 
+Sua eficiência se traduz em uma menor pegada de memória e menor uso de CPU, o que impacta diretamente a capacidade de usar instâncias de nuvem menores ou em menor 
+número, diminuindo os custos operacionais.</p>
+<h2>Concorrência: Goroutines, Channels e Processamento Paralelo</h2>
+<p>A linguagem Go, também se destaca pelo seu suporte embutido à concorrência através de goroutines (funções leves e concorrentes) e channels (canais tipados para 
+comunicação e sincronização). Esse modelo é perfeitamente adequado para tarefas I/O-bound (como leitura de múltiplas fontes de dados) e para a criação de pipelines
+distribuídos e robustos, evitando falhas comuns associadas à memória compartilhada.</p>
+<h2>Simplicidade e Legibilidade: Impacto no Desenvolvimento e Manutenção</h2>
+<p>Com uma sintaxe concisa (apenas 25 palavras-chave) e uma biblioteca padrão abrangente, o Golang oferece uma curva de aprendizado relativamente suave. 
+Sua simplicidade e código explícito facilitam a leitura e a manutenção de plataformas de dados de grande escala e longa duração, priorizando a produtividade da 
+equipe e a consistência do código.</p>
+<h2>Tipagem Estática e Tratamento de Erros: Construindo Sistemas de Dados Robustos</h2>
+<p>O sistema de tipagem estática do Go permite que classes de erros sejam detectadas durante a compilação. Seu mecanismo de tratamento de erros explícito 
+(funções retornam um valor de erro que deve ser verificado, ex: if err != nil) força os desenvolvedores a considerar e endereçar conscientemente as falhas, 
+aumentando a robustez dos sistemas de dados em produção.</p>
+<h2>Pegada de Recurso: Implicações para Custo e Escalabilidade</h2>
+<p>As aplicações Go têm um consumo modesto de recursos, o que é uma grande vantagem em ambientes de nuvem onde o uso de recursos está ligado ao custo. 
+A capacidade de compilar para um único binário estaticamente ligado simplifica drasticamente o processo de implantação, acelera a construção de imagens de 
+contêineres (Docker) e facilita a orquestração em plataformas como Kubernetes.</p>
+<h1>Golang vs. Python</h1>
+<p>Como mencionado anteriormente, embora o Python continue a dominar a Engenharia/Ciência de Dados devido ao seu vasto ecossistema, o Golang é a alternativa mais 
+convincente quando os requisitos são desempenho bruto e concorrência para a infraestrutura subjacente de dados.</p>
+<h1>High Performance Pipelines (ETL/ELT)</h1>
+<p>As concorrências (data race) do Go são ideais para pipelines ETL/ELT, utilizando goroutines para processamento paralelo e channels para gerenciar o fluxo de 
+dados entre estágios (fan-in e fan-out). O gerenciamento cuidadoso de alocação de memória e o uso de canais Go simples (em vez de sistemas complexos de filas) 
+podem otimizar o fluxo de dados e a manutenibilidade.</p>
+<p>O ecossistema para tarefas de engenharia de dados (serialização de dados, bancos de dados, filas de mensagens) é robusto. 
+O Go se integra bem com AWS, GCP e Azure, oferecendo SDKs maduros. Sua força estratégica é construir componentes personalizados e de alto desempenho (como agentes 
+de ingestão ou microsserviços de processamento) que aumentam ou se integram com serviços de dados gerenciados da nuvem (ex: S3, BigQuery, Kinesis, Pub/Sub), em vez
+de tentar replicar funcionalidades de grandes serviços gerenciados como AWS Glue, GCP Dataflow ou Azure Data Factory.</p>
+<h1>The Future (Big Data, AI/ML)</h1>
+<p>Se você percebe que existe na sua organização, a necessidade de que para obter resultados extraordinários é necessário mudar de paradigma, eu sugiro que a adoção
+seja incremental e focada em problemas. Recomendo começar com um gargalo específico, construir Proof-of-Concepts (PoCs) para benchmark. Depois investir 
+em treinamento e garantir a integração incremental com sistemas existentes usando interfaces padronizadas (REST APIs, gRPC, filas de mensagens).</p>
+<p>Embora não seja, atualmente, a principal linguagem de treinamento de modelos de IA/ML (pois o domínio é do Python), o Go aos poucos está ganhando terreno em:
+- <strong>Serviço de Inferência de ML</strong>: sua alta performance e baixa latência o tornam excelente para a implantação de servidores de inferência de modelos em tempo real.
+- <strong>Pré-processamento de Dados</strong>: oferece ganhos significativos de velocidade para tarefas intensivas de pré-processamento e engenharia de features para grandes conjuntos de dados.
+- <strong>Ferramentas de Infraestrutura</strong>: continua sendo a linguagem dominante em ferramentas de infraestrutura cloud-native (Docker, Kubernetes, Prometheus).</p>
+<p>Este é um artigo introdutório, sobre as minhas descobertas desta linguagem, aplicada no campo da Engenharia de Dados. E nos próximos artigos, eu trarei mais detalhes 
+sobre o uso prático e os resultados obtidos, com esta linguagem de programação.</p>
+<p>Stay safe, stay at home-office!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://lserra.github.io/tag/static.html">static</a>
+      <a href="https://lserra.github.io/tag/site.html">site</a>
+      <a href="https://lserra.github.io/tag/pelican.html">pelican</a>
+      <a href="https://lserra.github.io/tag/markdown.html">markdown</a>
+      <a href="https://lserra.github.io/tag/data-engineering.html">data engineering</a>
+      <a href="https://lserra.github.io/tag/code.html">code</a>
+      <a href="https://lserra.github.io/tag/go.html">go</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'goodcombination';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy; 2026  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Good Combination ",
+  "url" : "https://lserra.github.io",
+  "image": "/images/profile.png",
+  "description": "Ideias e reflexões sobre matemática, dados e programação"
+}
+</script>
+
+
+</body>
+</html>
