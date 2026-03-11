@@ -2,9 +2,9 @@
 
 `good_combination = { m, d, c }`
 
-Blog pessoal sobre matematica, dados e codigo.
+Blog pessoal sobre matemática, dados e código.
 
-Este repositorio contem o codigo-fonte de https://lserra.github.io, gerado com
+Este repositório contém o código-fonte de https://lserra.github.io, gerado com
 [Pelican](https://getpelican.com/) e com tema [Flex](https://github.com/alexandrevicenzi/Flex).
 
 ## Tecnologias
