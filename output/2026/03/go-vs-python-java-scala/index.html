@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://lserra.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://lserra.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Good Combination Atom">
+
+
+
+  
+
+
+<meta name="author" content="Laercio Serra" />
+<meta name="description" content="Uma análise crítica sobre por que as promessas do Java e Scala falharam na nuvem e como o Go se torna a aposta definitiva para performance." />
+<meta name="keywords" content="data engineering, golang, python, java, scala, cloud-native, finops">
+
+
+<meta property="og:site_name" content="Good Combination"/>
+<meta property="og:title" content="A Terceira Via da Engenharia de Dados"/>
+<meta property="og:description" content="Uma análise crítica sobre por que as promessas do Java e Scala falharam na nuvem e como o Go se torna a aposta definitiva para performance."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://lserra.github.io/2026/03/go-vs-python-java-scala/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2026-03-31 19:30:00-03:00"/>
+<meta property="article:modified_time" content="2026-03-31 19:30:00-03:00"/>
+<meta property="article:author" content="https://lserra.github.io/author/laercio-serra.html">
+<meta property="article:section" content="Data Engineering"/>
+<meta property="article:tag" content="data engineering"/>
+<meta property="article:tag" content="golang"/>
+<meta property="article:tag" content="python"/>
+<meta property="article:tag" content="java"/>
+<meta property="article:tag" content="scala"/>
+<meta property="article:tag" content="cloud-native"/>
+<meta property="article:tag" content="finops"/>
+<meta property="og:image" content="/images/profile.png">
+
+  <title>Good Combination &ndash; A Terceira Via da Engenharia de Dados</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://lserra.github.io">
+        <img src="/images/profile.png" alt="{ m, d, c }" title="{ m, d, c }">
+      </a>
+
+      <h1>
+        <a href="https://lserra.github.io">{ m, d, c }</a>
+      </h1>
+
+<p>matemática, dados e código</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/about-me/#about-me">
+                  Sobre mim
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/contact/#contact">
+                  Contato
+                </a>
+              </li>
+
+            <li>
+              <a target="_self" href="https://lserra.github.io" >ideias e reflexoes</a>
+            </li>
+            <li>
+              <a target="_self" href="https://lserra.github.io" >portfolio</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/lserra" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/laerciosserra/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-x" href="https://x.com/laercio_serra" target="_blank">
+              <i class="fab fa-x"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://lserra.github.io">Home</a>
+
+      <a href="/archives">Arquivos</a>
+      <a href="/categories">Categorias</a>
+      <a href="/tags">Tags</a>
+
+      <a href="https://lserra.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="go-vs-python-java-scala">A Terceira Via da Engenharia de Dados</h1>
+    <p>
+      Posted on Tue 31 March 2026 in <a href="https://lserra.github.io/category/data-engineering.html">Data Engineering</a>
+
+        &#8226; 3 min read
+    </p>
+  </header>
+
+
+  <div>
+    <h1>O Trilema da Engenharia de Dados</h1>
+<p>Por anos, engenheiros de dados viveram um dilema: escolher a <strong>simplicidade</strong> do Python, sacrificando a performance, ou abraçar a <strong>velocidade</strong> do Java/Scala, sacrificando a sanidade mental e o orçamento de infraestrutura.</p>
+<p>Linguagens baseadas em JVM (Java Virtual Machine), como Java e Scala, foram as grandes promessas para o Big Data (pense em Spark e Kafka). Mas, na era da nuvem e do FinOps, elas carregam um peso que muitos times não conseguem mais sustentar. É aqui que o <strong>Golang (Go)</strong> surge como a "Terceira Via".</p>
+<h1>1. Go vs. Python: O teto de vidro da performance</h1>
+<p>O Python é fantástico para prototipagem e Ciência de Dados. No entanto, quando falamos de pipelines que rodam 24/7 processando bilhões de eventos, o Python atinge um "teto de vidro".</p>
+<ul>
+<li><strong>O problema:</strong> O Python é interpretado. Em escala, ele exige mais CPU e mais memória para fazer o mesmo trabalho que uma linguagem compilada.</li>
+<li><strong>A solução do Go:</strong> Ao compilar para código binário nativo, o Go oferece performance de "verdade" com uma sintaxe quase tão simples quanto a do Python. Para tarefas de infraestrutura subjacente, o Go não é apenas uma alternativa; é um upgrade de eficiência.</li>
+</ul>
+<h1>2. Go vs. Java: O fim da complexidade JVM</h1>
+<p>Java foi o rei do Big Data, mas trouxe consigo o "Inferno da JVM". Configurar <em>heap sizes</em>, gerenciar o <em>Garbage Collector</em> e lidar com o consumo massivo de RAM em containers Docker tornou-se um pesadelo operacional.</p>
+<ul>
+<li><strong>A fadiga do Java:</strong> Ambientes Java são pesados. O tempo de "boot" de um microserviço Java pode custar caro em arquiteturas <em>serverless</em>.</li>
+<li><strong>A agilidade do Go:</strong> O Go não precisa de uma máquina virtual. Ele gera um binário único e estático. Onde o arquivo está, ele roda. O consumo de memória de um serviço em Go é, muitas vezes, <strong>10 a 20 vezes menor</strong> que o equivalente em Java.</li>
+</ul>
+<h1>3. Go vs. Scala: Manutenibilidade vs. Abstração Acadêmica</h1>
+<p>Scala decolou com o Apache Spark, prometendo o poder da programação funcional. Na prática, criou silos: apenas "especialistas em Scala" conseguiam manter o código, que muitas vezes é excessivamente complexo e difícil de debugar.</p>
+<ul>
+<li><strong>O custo do Scala:</strong> Encontrar e manter talentos em Scala é caro. O código tende a ser denso e acadêmico.</li>
+<li><strong>A clareza do Go:</strong> O Go foi desenhado para ser lido por humanos. Com apenas 25 palavras-chave, ele prioriza a manutenibilidade. Na engenharia de dados moderna, o lucro vem da facilidade de evolução do código, não de abstrações complexas.</li>
+</ul>
+<h1>Por que acreditar que o Go é a grande aposta?</h1>
+<p>As "promessas" de Java e Scala foram feitas em uma era de servidores <em>on-premise</em> gigantescos. No mundo de <strong>Cloud-Native, Kubernetes e Serverless</strong>, precisamos de linguagens que:</p>
+<ol>
+<li><strong>Arranquem instantaneamente.</strong></li>
+<li><strong>Consumam o mínimo de RAM possível (FinOps).</strong></li>
+<li><strong>Sejam fáceis de manter por qualquer membro do time.</strong></li>
+</ol>
+<p>O Go resolve o Trilema: oferece a velocidade do Java, a simplicidade próxima ao Python e uma eficiência de recursos que nenhuma das outras alcança.</p>
+<p>Se você está cansado de ajustar parâmetros da JVM ou de pagar faturas astronômicas de instâncias Python sobrecarregadas, talvez seja a hora de olhar para a Terceira Via.</p>
+<hr>
+<p>Stay safe, stay at home-office!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://lserra.github.io/tag/data-engineering.html">data engineering</a>
+      <a href="https://lserra.github.io/tag/golang.html">golang</a>
+      <a href="https://lserra.github.io/tag/python.html">python</a>
+      <a href="https://lserra.github.io/tag/java.html">java</a>
+      <a href="https://lserra.github.io/tag/scala.html">scala</a>
+      <a href="https://lserra.github.io/tag/cloud-native.html">cloud-native</a>
+      <a href="https://lserra.github.io/tag/finops.html">finops</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'goodcombination';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy; 2026  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Good Combination ",
+  "url" : "https://lserra.github.io",
+  "image": "/images/profile.png",
+  "description": "Ideias e reflexões sobre matemática, dados e programação"
+}
+</script>
+
+
+</body>
+</html>
