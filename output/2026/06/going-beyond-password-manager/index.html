@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://lserra.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://lserra.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Good Combination Atom">
+
+
+
+  
+
+
+<meta name="author" content="Laercio Serra" />
+<meta name="description" content="Senha forte é essencial, mas não é o bastante. Neste artigo, vou além: exploro ameaças de dia-zero, riscos na virtualização e vazamentos de dados via IA – e trago caminhos práticos para fortalecer a segurança digital na sua organização." />
+<meta name="keywords" content="Infosec, Virtualização, ZeroDay, AISecurit, DataProtection, RiskManagement, CyberResilience">
+
+
+<meta property="og:site_name" content="Good Combination"/>
+<meta property="og:title" content="3 Ameaças Silenciosas que o seu Time de Segurança Digital Precisa Enfrentar"/>
+<meta property="og:description" content="Senha forte é essencial, mas não é o bastante. Neste artigo, vou além: exploro ameaças de dia-zero, riscos na virtualização e vazamentos de dados via IA – e trago caminhos práticos para fortalecer a segurança digital na sua organização."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://lserra.github.io/2026/06/going-beyond-password-manager/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2026-06-16 20:30:00-03:00"/>
+<meta property="article:modified_time" content="2026-04-16 20:30:00-03:00"/>
+<meta property="article:author" content="https://lserra.github.io/author/laercio-serra.html">
+<meta property="article:section" content="Data Security"/>
+<meta property="article:tag" content="Infosec"/>
+<meta property="article:tag" content="Virtualização"/>
+<meta property="article:tag" content="ZeroDay"/>
+<meta property="article:tag" content="AISecurit"/>
+<meta property="article:tag" content="DataProtection"/>
+<meta property="article:tag" content="RiskManagement"/>
+<meta property="article:tag" content="CyberResilience"/>
+<meta property="og:image" content="/images/profile.png">
+
+  <title>Good Combination &ndash; 3 Ameaças Silenciosas que o seu Time de Segurança Digital Precisa Enfrentar</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://lserra.github.io">
+        <img src="/images/profile.png" alt="{ m, d, c }" title="{ m, d, c }">
+      </a>
+
+      <h1>
+        <a href="https://lserra.github.io">{ m, d, c }</a>
+      </h1>
+
+<p>matemática, dados e código</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/about-me/#about-me">
+                  Sobre mim
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/contact/#contact">
+                  Contato
+                </a>
+              </li>
+
+            <li>
+              <a target="_self" href="https://lserra.github.io" >ideias e reflexoes</a>
+            </li>
+            <li>
+              <a target="_self" href="https://lserra.github.io" >portfolio</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/lserra" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/laerciosserra/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-x" href="https://x.com/laercio_serra" target="_blank">
+              <i class="fab fa-x"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://lserra.github.io">Home</a>
+
+      <a href="/archives">Arquivos</a>
+      <a href="/categories">Categorias</a>
+      <a href="/tags">Tags</a>
+
+      <a href="https://lserra.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="going-beyond-password-manager">3 Ameaças Silenciosas que o seu Time de Segurança Digital Precisa Enfrentar</h1>
+    <p>
+      Posted on Tue 16 June 2026 in <a href="https://lserra.github.io/category/data-security.html">Data Security</a>
+
+        &#8226; 5 min read
+    </p>
+  </header>
+
+
+  <div>
+    <h1>A senha é o primeiro passo, não o destino final</h1>
+<p>Recentemente eu um li post, que me inspirou esta reflexão: uma senha forte é fundamental. Doze ou mais caracteres, incluindo maiúsculas e minúsculas, números, símbolos, autenticação em dois fatores — cada uma dessas práticas representa uma barreira essencial contra o acesso não autorizado. E, sim, cinco minutos investidos hoje podem evitar meses de dor de cabeça.</p>
+<p>O post está certo, mas como especialistas em segurança digital e inteligência de dados, precisamos ir além. A senha é o primeiro degrau de uma escada que precisa ser subida por completo. O cenário de ameaças atual exige que olhemos para além da superfície — para vulnerabilidades que não dependem de credenciais roubadas, para infraestruturas que operam fora do campo de visão das soluções tradicionais e para novos vetores de ataque que sequer existiam há poucos anos.</p>
+<h1>A exploração de vulnerabilidades de Dia Zero</h1>
+<p>Uma vulnerabilidade de dia zero é uma falha de segurança recém-descoberta que ainda não foi corrigida pelo fabricante ou pela comunidade de desenvolvimento — o nome vem do fato de que os defensores têm "zero dias" de aviso antes que a falha possa ser explorada. O atacante, não o defensor, detém a vantagem temporal.</p>
+<p>Como funciona? O invasor identifica uma fraqueza no software, firmware ou hardware por meio de engenharia reversa, testes de fuzzing ou análise de patches. Em seguida, desenvolve um código exploit personalizado para explorar a vulnerabilidade. A entrega geralmente ocorre via phishing, sites maliciosos ou atualizações comprometidas. Quando executado, o exploit concede acesso remoto, rouba credenciais ou instala malware — tudo sem que soluções tradicionais como antivírus ou firewalls consigam detectar.</p>
+<p>O cenário é preocupante. Em 2023, foram rastreadas 97 vulnerabilidades de dia zero exploradas ativamente, contra 62 em 2022. No primeiro trimestre de 2026, já vimos casos de alto perfil, incluindo duas vulnerabilidades simultâneas no Google Chrome e um grupo de ransomware explorando uma falha em firewalls da Cisco.</p>
+<p>Como se proteger? Não há como impedir que vulnerabilidades de dia zero existam, mas é possível construir sistemas e culturas que se recuperem rapidamente quando uma delas surgir. Isso passa por: reduzir a superfície de ataque com componentes mínimos e endurecidos; adotar visibilidade baseada em SBOM (Software Bill of Materials) para saber rapidamente se um componente afetado está em uso; implementar detecção baseada em comportamento, não em assinaturas; e estabelecer capacidade de reconstrução e reimplantação ágil de infraestrutura.</p>
+<h1>A Infraestrutura de Virtualização</h1>
+<p>A virtualização é a espinha dorsal da infraestrutura moderna de TI. O hipervisor — o software que gerencia e isola as máquinas virtuais — é o alicerce sobre o qual repousam servidores, aplicações e dados. E é exatamente por isso que se tornou um alvo prioritário.</p>
+<p>Como funciona o ataque? Uma vez dentro da rede, os invasores pivotam em direção aos hipervisores usando credenciais de autenticação internas comprometidas, especialmente em ambientes onde a segmentação de rede falhou em barrar o movimento lateral. Com acesso ao hipervisor, o atacante pode desabilitar defesas endpoint, adulterar switches virtuais e preparar VMs para a implantação de ransomware em escala. Ferramentas built-in como o <code>openssl</code> podem ser usadas para criptografar volumes inteiros, sem necessidade de upload de binários personalizados.</p>
+<p>Os números são alarmantes. Em 2025, a participação de ransomware direcionado a hipervisores saltou de 3% no primeiro semestre para 25% no segundo. Os adversários estão usando automação com IA e ferramentas generativas para criar campanhas de phishing hiper-realistas que miram diretamente os administradores de virtualização.</p>
+<p>Como se proteger? O hipervisor precisa ser tratado com o mesmo rigor aplicado a endpoints e servidores. Isso inclui: aplicação de MFA no acesso à camada de virtualização (a Microsoft estima que mais de 99% das tentativas de comprometimento de contas podem ser bloqueadas com MFA); eliminação de exposição de rede, evitando VPNs, portas abertas ou IPs públicos no acesso a VMs; endurecimento em tempo de execução com monitoramento comportamental; e adoção de um modelo Zero Trust que inclua a camada de virtualização — não basta confiar em "insiders" sem verificação contínua de identidade.</p>
+<h1>Data Leaks via Prompts de IA</h1>
+<p>A adoção acelerada de inteligência artificial generativa trouxe um novo vetor de risco que muitas organizações ainda não mapearam adequadamente: o vazamento de dados sensíveis por meio de interações com sistemas de IA.</p>
+<p>Como funciona? Funcionários podem inadvertidamente compartilhar informações proprietárias ou sensíveis ao interagir com ferramentas de IA generativa, seja por meio de históricos de chat, uploads de arquivos ou prompts que contenham dados confidenciais. Mas o problema vai além do erro humano. Ataques de injeção de prompt — nos quais instruções maliciosas são vinculadas em entradas aparentemente inofensivas — podem manipular a IA para ignorar os seus mecanismos de segurança e vazar informações.</p>
+<p>Exemplos recentes ilustram a gravidade: o EchoLeak (CVE-2025-32711), uma vulnerabilidade de injeção de prompt zero-click no Microsoft 365 Copilot que permitia exfiltração remota de dados via um único e-mail malicioso; o ShadowLeak, uma falha zero-click no agente Deep Research do ChatGPT que vazava dados da caixa de entrada do Gmail; e o ForcedLeak no Salesforce Agentforce, que expunha dados de CRM por meio de injeção indireta de prompt.</p>
+<p>Como se proteger? A proteção contra esse novo vetor exige uma abordagem em múltiplas camadas: estabelecer políticas claras de uso de IA generativa e treinar colaboradores sobre os riscos; implementar soluções de Data Security Posture Management (DSPM) específicas para IA; monitorar comportamentos anômalos em integrações de IA; e adotar camadas de segurança que sanitizem prompts antes do envio a APIs de LLM — soluções como LLM-Redactor, que avaliam técnicas de privacidade para requisições a LLMs, já estão emergindo como respostas a esse desafio.</p>
+<h1>O caminho é longo, mas a jornada vale a pena</h1>
+<p>A segurança digital não é um destino, é uma jornada contínua. A senha forte e a autenticação em dois fatores são passos indispensáveis — e merecem todo o reconhecimento. Mas são o ponto de partida, não o ponto de chegada.</p>
+<p>Vulnerabilidades de dia zero, ataques à infraestrutura de virtualização e vazamentos de dados via IA representam ameaças que não podem ser ignoradas. Cada uma delas exige estratégias específicas, ferramentas adequadas e uma mudança de mentalidade: de uma postura reativa para uma postura proativa e resiliente.</p>
+<p>Por isso, acredito que a proteção de dados vai além do gerenciamento de senhas. Ela exige uma visão holística, que abrange não apenas as credenciais (IAM), mas toda a superfície de ataque, toda a cadeia de valor e toda a cultura organizacional. É um desafio complexo, mas é o único caminho para construir uma segurança digital verdadeiramente robusta e preparada para o futuro.</p>
+<hr>
+<p>Stay safe, stay at home-office!</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://lserra.github.io/tag/infosec.html">Infosec</a>
+      <a href="https://lserra.github.io/tag/virtualizacao.html">Virtualização</a>
+      <a href="https://lserra.github.io/tag/zeroday.html">ZeroDay</a>
+      <a href="https://lserra.github.io/tag/aisecurit.html">AISecurit</a>
+      <a href="https://lserra.github.io/tag/dataprotection.html">DataProtection</a>
+      <a href="https://lserra.github.io/tag/riskmanagement.html">RiskManagement</a>
+      <a href="https://lserra.github.io/tag/cyberresilience.html">CyberResilience</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'goodcombination';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy; 2026  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Good Combination ",
+  "url" : "https://lserra.github.io",
+  "image": "/images/profile.png",
+  "description": "Ideias e reflexões sobre matemática, dados e programação"
+}
+</script>
+
+
+</body>
+</html>
