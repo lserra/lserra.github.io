@@ -1,18 +1,14 @@
 Title: Sobre mim
 Date: 2020-05-17 00:00
-Modified: 2020-05-17 00:00
+Modified: 2026-08-21 00:00
 Slug: about-me
 
-Meu nome é Laercio. Sou engenheiro de dados, com experiência em matemática, dados e código.
+My name is Laercio Serra.
 
-Atualmente, moro e trabalho no Rio de Janeiro, Brasil. Quando não estou com minha família ou amigos, costumo programar, analisar dados e estudar matemática. Fora isso, gosto de ouvir música, andar de bicicleta ou moto, ler, desenhar e pintar.
+Data Security Engineer with 20+ years of experience designing scalable, secure, and compliant data platforms. I bridge the gap between high-performance data engineering and data protection — from policy tags in BigQuery and secret management to immutable data layers and LGPD/GDPR compliance.
 
-Hoje, o volume de dados produzido por organizações cresce ano a ano. Esses dados ficam disponíveis em vários formatos e podem ser usados de muitas formas, com diferentes ferramentas.
+My technical toolkit includes Python, Go, Java, SQL (PostgreSQL, BigQuery, SQL Server), cloud platforms (GCP, AWS), and pipelines built with Airflow, Spark, and Kafka.
 
-De fato, essa é uma matriz complexa: **[** _dados x forma x ferramenta_ **]**.
+I’m increasingly applying data engineering best practices to cybersecurity use cases such as access anomaly detection, data activity monitoring, and compliance-by-design. At the same time, I continue to deliver efficient ETL pipelines, real-time analytics, and optimized cloud infrastructure that turn raw data into business insights.
 
-Também tenho outro blog (o mais antigo), com bastante conteúdo sobre engenharia de dados e análise de dados aplicada a projetos de BI e Big Data: [BI na Prática](http://binapratica.blogspot.com/).
-
-No futuro, esse blog antigo será desativado. Estou trabalhando na migração para este novo blog.
-
-Obrigado por visitar meu blog!
+Let’s connect.
