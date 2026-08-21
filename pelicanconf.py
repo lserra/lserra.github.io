@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+
 from datetime import datetime
 
 AUTHOR = 'lserra'
@@ -9,10 +10,10 @@ SITEURL = 'https://lserra.github.io'
 DOMAIN = SITEURL
 FEED_DOMAIN = SITEURL
 HTTPS = True
-SITENAME = 'Good Combination'
-SITETITLE = '{ m, d, c }'
-SITESUBTITLE = 'matemática, dados e código'
-SITEDESCRIPTION = 'Ideias e reflexões sobre matemática, dados e programação'
+SITENAME = 'CSDI'
+SITETITLE = 'Cloud, Security, Data & IA'
+SITESUBTITLE = 'Cloud, Security, Data & IA'
+SITEDESCRIPTION = 'Cloud, Security, Data & IA'
 SITELOGO = '/images/profile.png'
 # FAVICON = '/images/favicon.ico'
 ROBOTS = "index, follow"
