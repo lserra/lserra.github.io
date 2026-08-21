@@ -10,7 +10,7 @@ Status: published
 
 # Do Warehouse ao Hype da Medalha
 
-## Por que a Modismo das Big Techs Pode Estar Quebrando seu FinOps
+## Por que o Modismo das Big Techs Pode Estar Quebrando seu FinOps
 
 A jornada da arquitetura de dados nas últimas três décadas tem sido menos uma evolução linear e mais um ciclo de expansão de hype seguido por contrações de realidade. Desde os rigorosos armazéns dos anos 90 até a explosão de dados não estruturados dos dias atuais, as empresas foram apresentadas a uma miríade de padrões arquitetônicos.
 
