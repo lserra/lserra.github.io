@@ -53,7 +53,7 @@ Ao seguir cegamente o hype impulsionado por *big techs* e vendedores de platafor
 
 1.  **Aumento exponencial de custos:** Armazenar dados em três camadas (Bronze, Prata, Ouro) com replicação completa, especialmente em volumes de petabytes, transforma um ambiente que deveria ser econômico (Lakehouse) em um dos maiores itens de custo da nuvem.
 2. **Complexidade desnecessária:** A arquitetura Medallion pressupõe um fluxo linear que não se aplica a todos os casos de uso. Para streams de IoT ou machine learning em tempo real, essa transformação em cascata adiciona latência e pontos de falha que não existiriam em um modelo mais enxuto.
-3.  **O Efeito "Big Tech Wash":** O que funciona para a Uber, Netflix ou Meta, que têm milhares de engenheiros e escalas planetárias, não funciona para uma média ou grande empresa nacional. Adotar a arquitetura "Medallion" porque o fornecedor de cloud ou a consultoria disse que é "o padrão do mercado" é ignorar o contexto de maturidade, a capacidade de retenção de talentos e, principalmente, o retorno sobre o investimento.
+3.  **O Efeito "Big Tech":** O que funciona para a Uber, Netflix ou Meta, que têm milhares de engenheiros e escalas planetárias, não funciona para uma média ou grande empresa nacional. Adotar a arquitetura "Medallion" porque o fornecedor de cloud ou a consultoria disse que é "o padrão do mercado" é ignorar o contexto de maturidade, a capacidade de retenção de talentos e, principalmente, o retorno sobre o investimento.
 
 A indústria está madura para um movimento de **soberania arquitetônica**. Em um mundo *cloud-native*, a liberdade de escolha deveria ser a maior vantagem. É possível, e muitas vezes recomendável, quebrar o dogma da medalha.
 
