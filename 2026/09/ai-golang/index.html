@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://lserra.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://lserra.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="lserra Atom">
+
+
+
+  
+
+
+<meta name="author" content="Laercio Serra" />
+<meta name="description" content="A ideia deste artigo é apontar a crescente relevância da linguagem Go no cenário da inteligência artificial, destacando sua superioridade sobre linguagens dinâmicas e &#34;AI-native&#34; devido à sua previsibilidade e simplicidade. Além disso, a compilação extremamente rápida e a robusta biblioteca padrão permitem que modelos de IA iterem e corrijam sistemas em tempo real de forma eficiente. Além disso, procuro demonstrar, por meio de exemplos práticos, como o ecossistema estável de Go favorece a construção de serviços escaláveis e seguros." />
+<meta name="keywords" content="software engineering, data engineering, ai engineering, golang">
+
+
+<meta property="og:site_name" content="lserra"/>
+<meta property="og:title" content="Go na Era da IA"/>
+<meta property="og:description" content="A ideia deste artigo é apontar a crescente relevância da linguagem Go no cenário da inteligência artificial, destacando sua superioridade sobre linguagens dinâmicas e &#34;AI-native&#34; devido à sua previsibilidade e simplicidade. Além disso, a compilação extremamente rápida e a robusta biblioteca padrão permitem que modelos de IA iterem e corrijam sistemas em tempo real de forma eficiente. Além disso, procuro demonstrar, por meio de exemplos práticos, como o ecossistema estável de Go favorece a construção de serviços escaláveis e seguros."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://lserra.github.io/2026/09/ai-golang/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2026-09-10 18:30:00-03:00"/>
+<meta property="article:modified_time" content="2026-09-10 18:30:00-03:00"/>
+<meta property="article:author" content="https://lserra.github.io/author/laercio-serra.html">
+<meta property="article:section" content="Data Engineering"/>
+<meta property="article:tag" content="software engineering"/>
+<meta property="article:tag" content="data engineering"/>
+<meta property="article:tag" content="ai engineering"/>
+<meta property="article:tag" content="golang"/>
+<meta property="og:image" content="/images/profile.png">
+
+  <title>lserra &ndash; Go na Era da IA</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://lserra.github.io">
+        <img src="/images/profile.png" alt="terresact.ai" title="terresact.ai">
+      </a>
+
+      <h1>
+        <a href="https://lserra.github.io">terresact.ai</a>
+      </h1>
+
+<p>Cloud, Security, Data and AI</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/about-me/#about-me">
+                  Sobre mim
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/contact/#contact">
+                  Contato
+                </a>
+              </li>
+
+            <li>
+              <a target="_self" href="https://lserra.github.io" >ideias e reflexoes</a>
+            </li>
+            <li>
+              <a target="_self" href="https://lserra.github.io" >portfolio</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/lserra" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/laerciosserra/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-x" href="https://x.com/laercio_serra" target="_blank">
+              <i class="fab fa-x"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://lserra.github.io">Home</a>
+
+      <a href="/archives">Arquivos</a>
+      <a href="/categories">Categorias</a>
+      <a href="/tags">Tags</a>
+
+      <a href="https://lserra.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="ai-golang">Go na Era da IA</h1>
+    <p>
+      Posted on Thu 10 September 2026 in <a href="https://lserra.github.io/category/data-engineering.html">Data Engineering</a>
+
+        &#8226; 6 min read
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Ascensão dos Agentes de IA</h1>
+<h2>Crítica às linguagens dinâmicas e “AI-native”</h2>
+<p>Com a ascensão de agentes de IA escrevendo código, linguagens estáticas e explícitas, tendem a se tornar mais valiosas do que linguagens dinâmicas e mágicas.</p>
+<p>Existe uma corrente de pessoas e empresas que acreditam nesta ideia e apostam que ecossistemas já maduros, estáveis e previsíveis (como Go) serão mais úteis para modelos e para produção real, do que novas linguagens "AI-native” (como Mojo).</p>
+<p>Ou seja, nesta corrida pela IA, pessoas e empresas apostam em um menor uso de linguagens dinâmicas para backend em novos projetos (Ruby on Rails, PHP e até Python, em certos workloads), não porque sejam ruins para humanos, mas porque são menos “amigáveis” para máquinas (performance, tipagem, muita convenção implícita).</p>
+<p>Em relação a linguagens “AI-native” recentes (Zero, Mojo, Julia, Rust e algumas outras variações de Python), são linguagens muito novas, com ecossistema pequeno, poucas bibliotecas maduras e pouca base de código em produção, o que gera as tais dúvidas de segurança, compilação e previsibilidade.</p>
+<h2>Por que Go seria ótima para a IA</h2>
+<p>Listo abaixo alguns pontos que tornam Go especialmente atraente para agentes de IA:</p>
+<ul>
+<li>
+<p><strong>Biblioteca padrão enorme e bem desenhada</strong>: dá para construir sistemas de produção com poucas dependências externas (HTTP, JSON, crypto, testes, concorrência, filesystem etc.).</p>
+</li>
+<li>
+<p><strong>Forte foco em segurança e estabilidade da <code>stdlib</code></strong>: quase não se ouve falar de desastres de segurança de grande escala originados dela.</p>
+</li>
+<li>
+<p><strong>Compilador extremamente rápido</strong>: isso é crucial quando agentes compilam e iteram centenas de vezes em um fluxo automatizado.</p>
+</li>
+<li>
+<p><strong>Binário estático único</strong>: cross-compilation simples, formatação embutida (<code>gofmt</code>), poucas dores de dependência, sintaxe simples, uma forma mais óbvia de fazer as coisas.</p>
+</li>
+</ul>
+<h2>Como a IA interage com a sintaxe de Go</h2>
+<p>A interação da IA com a sintaxe do Go é facilitada porque Go foi desenhada para ser simples, previsível e com pouca “mágica”, o que torna mais fácil para modelos gerar, compilar, rodar e manter código automaticamente.</p>
+<h3>Sintaxe simples e pouco ambígua</h3>
+<ul>
+<li>
+<p>Go tem poucos jeitos diferentes de fazer a mesma coisa, pouca metaprogramação e quase nenhuma construção “surpresa” (sem macros complexas, DSLs internas, etc.).</p>
+</li>
+<li>
+<p>Para um modelo de IA, isso reduz muito a ambiguidade: dado um problema, há um caminho óbvio de implementação, o que diminui a chance de gerar código criativo porém errado ou difícil de manter.</p>
+</li>
+</ul>
+<h3>Erros explícitos e fluxo de controle claro</h3>
+<ul>
+<li>
+<p>O padrão de tratamento de erros em Go (retornar <code>err</code> e checar <code>if err != nil { ... }</code>) torna o fluxo de falha visível, passo a passo.</p>
+</li>
+<li>
+<p>Para IA, isso é ótimo porque o modelo enxerga padrões muito regulares: funções retornam valores + erro, chamadas são seguidas de checagem, e isso favorece geração de código consistente, fácil de refatorar e de debugar.</p>
+</li>
+</ul>
+<h3>Formatação padronizada (<code>gofmt</code>)</h3>
+<ul>
+<li>
+<p>Como <code>gofmt</code> impõe um estilo único de código, praticamente todo repositório Go “parece igual”.</p>
+</li>
+<li>
+<p>Isso ajuda o modelo de IA a aprender um padrão visual e estrutural muito uniforme, e também facilita ciclos automáticos de “gerar → formatar → compilar → ajustar”, sem briga de estilo ou convenções locais.</p>
+</li>
+</ul>
+<h3>Biblioteca padrão e menos dependências</h3>
+<ul>
+<li>
+<p>A <code>stdlib</code> do Go cobre HTTP, JSON, testes, criptografia, concorrência, arquivos, etc., permitindo que muito código de aplicação seja escrito só com pacotes nativos.</p>
+</li>
+<li>
+<p>Para IA, isso significa: menos necessidade de escolher entre 10 bibliotecas que fazem quase a mesma coisa, menos risco de importar algo inseguro ou desatualizado e menos fricção em resolver dependências.</p>
+</li>
+</ul>
+<h3>Compilação rápida e feedback em loop</h3>
+<ul>
+<li>
+<p>O compilador de Go é conhecido por ser bem rápido, o que é crucial quando um agente de IA está num loop de “gera código → compila → testa → corrige”.</p>
+</li>
+<li>
+<p>A rapidez de compilação transforma Go num bom “alvo” para agentes autônomos: o modelo pode iterar muitas vezes em pouco tempo, ajustando detalhes até os binários passarem nos testes.</p>
+</li>
+</ul>
+<h2>Como funciona esse fluxo na prática</h2>
+<p>Apresento abaixo um fluxo de um agente de IA criando e evoluindo um serviço HTTP em Go e, em cada etapa, mostro como a sintaxe da linguagem ajuda o modelo.</p>
+<h3>1. Primeiro passo: servidor HTTP mínimo</h3>
+<p>Um agente de IA começa pelo esqueleto mais simples possível usando <code>net/http</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+<span class="w">    </span><span class="s">&quot;log&quot;</span>
+<span class="w">    </span><span class="s">&quot;net/http&quot;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Olá! Sou GO seu assistente virtual.&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">})</span>
+
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Escutando em :8080&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8080&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Por que isso é amigável para IA?</p>
+<ul>
+<li>Poucos conceitos: <code>package main</code>, <code>import</code>, <code>func main</code>, <code>HandleFunc</code>, <code>ListenAndServe</code>.</li>
+<li>A assinatura do handler é sempre igual: <code>func(w http.ResponseWriter, r *http.Request)</code>, sem variações mágicas ou anotações.</li>
+<li>O servidor inteiro cabe em poucas linhas, sem precisar de framework externo, o que reduz espaço de erro na geração.</li>
+</ul>
+<h3>2. Tratamento explícito de erros</h3>
+<p>Logo na primeira versão o agente já segue o padrão clássico de erro em Go:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8080&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Interação com a sintaxe:</p>
+<ul>
+<li>O padrão <code>if err := ...; err != nil { ... }</code> aparece massivamente em código Go, então o modelo “internaliza” isso e tende a repetir corretamente.</li>
+<li>Não existem exceções escondidas ou <code>try/catch</code>; o fluxo de erros é sempre visível na sintaxe, o que facilita ajustes automáticos (por exemplo, trocar <code>log.Fatal</code> por <code>log.Printf</code> e continuar rodando).</li>
+</ul>
+<h3>3. Adicionando rotas e lógica</h3>
+<p>Agora o agente precisa de múltiplas rotas, talvez uma que leia query params:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">helloHandler</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Query</span><span class="p">().</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;visitante&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Olá, %s!\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">helloHandler</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Escutando em :8080&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8080&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">log</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Por que é simples para IA?</p>
+<ul>
+<li>A extração de parâmetros é feita com chamadas diretas (<code>r.URL.Query().Get("name")</code>), sem decorators ou anotações mágicas.</li>
+<li>Registrar rotas é sempre a mesma forma (<code>http.HandleFunc("/path", handler)</code>), tornando fácil para o modelo adicionar, remover ou renomear handlers sem quebrar nada “escondido”.</li>
+</ul>
+<h3>4. Concorrência com goroutines</h3>
+<p>Suponha que a rota acione uma tarefa demorada (por exemplo, chamar outra API ou processar algo). O agente pode naturalmente usar goroutines:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span><span class="w"> </span><span class="nx">processAsync</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// faz algo pesado aqui...</span>
+<span class="w">    </span><span class="nx">log</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Processando:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">jobHandler</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">r</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">Query</span><span class="p">().</span><span class="nx">Get</span><span class="p">(</span><span class="s">&quot;data&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">http</span><span class="p">.</span><span class="nx">Error</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;parametro &#39;data&#39; é obrigatório&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusBadRequest</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">go</span><span class="w"> </span><span class="nx">processAsync</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">w</span><span class="p">.</span><span class="nx">WriteHeader</span><span class="p">(</span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusAccepted</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tarefa enfileirada&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Interação sintática:</p>
+<ul>
+<li>Convergência de conceitos: concorrência é só <code>go nomeDaFuncao(...)</code>, sem palavras‑chave extras, sem promises, sem await.</li>
+<li>O handler continua com a mesma assinatura; a IA apenas injeta <code>go</code> antes da chamada, sem precisar mudar tipos ou assinar interfaces de forma complexa.</li>
+</ul>
+<h2>5. Evoluindo para melhor organização</h2>
+<p>Se o código crescer, o agente pode reestruturar em tipos que implementam <code>http.Handler</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">type</span><span class="w"> </span><span class="nx">Server</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">logger</span><span class="w"> </span><span class="o">*</span><span class="nx">log</span><span class="p">.</span><span class="nx">Logger</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="p">(</span><span class="nx">s</span><span class="w"> </span><span class="o">*</span><span class="nx">Server</span><span class="p">)</span><span class="w"> </span><span class="nx">hello</span><span class="p">(</span><span class="nx">w</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span><span class="w"> </span><span class="nx">r</span><span class="w"> </span><span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">s</span><span class="p">.</span><span class="nx">logger</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Requisição em /hello&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Fprintln</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Olá de um servidor estruturado!&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">logger</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">log</span><span class="p">.</span><span class="nx">Default</span><span class="p">()</span>
+<span class="w">    </span><span class="nx">srv</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">Server</span><span class="p">{</span><span class="nx">logger</span><span class="p">:</span><span class="w"> </span><span class="nx">logger</span><span class="p">}</span>
+
+<span class="w">    </span><span class="nx">http</span><span class="p">.</span><span class="nx">HandleFunc</span><span class="p">(</span><span class="s">&quot;/hello&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">srv</span><span class="p">.</span><span class="nx">hello</span><span class="p">)</span>
+
+<span class="w">    </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Escutando em :8080&quot;</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">ListenAndServe</span><span class="p">(</span><span class="s">&quot;:8080&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">nil</span><span class="p">);</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">logger</span><span class="p">.</span><span class="nx">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Por que isso continua amigável para IA?</p>
+<ul>
+<li>A passagem de dependências (logger, configs, etc.) usa structs simples; não há injeção de dependência mágica ou contêineres complexos.</li>
+<li>Métodos de struct usam a mesma sintaxe de função (<code>func (s *Server) hello(...)</code>), e o modelo só precisa manter consistência de nomes.</li>
+</ul>
+<h2>6. Loop de feedback: gerar → compilar → ajustar</h2>
+<p>Num agente mais avançado, o fluxo seria algo assim:</p>
+<ol>
+<li>Gerar o código inicial com <code>net/http</code>, handlers e rotas.  </li>
+<li>Tentar compilar. Se o compilador falhar, ler mensagem, ajustar tipos ou imports.  </li>
+<li>Rodar testes ou requisições de fumaça (ex.: <code>curl /hello</code>) e, se falhar, ajustar a lógica.</li>
+</ol>
+<p>Por que Go ajuda muito aqui?</p>
+<ul>
+<li>Mensagens de erro de compilação costumam ser diretas (“undefined: X”, “cannot use Y (type A) as type B”), e o código gerado usa poucas features da linguagem.</li>
+<li>Como a sintaxe é estável e há uma só forma idiomática de fazer a maioria das coisas, o agente consegue rapidamente convergir para um estado que compila e passa nos testes.</li>
+</ul>
+<p>What do you think?</p>
+<p>Let's talk about it.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://lserra.github.io/tag/software-engineering.html">software engineering</a>
+      <a href="https://lserra.github.io/tag/data-engineering.html">data engineering</a>
+      <a href="https://lserra.github.io/tag/ai-engineering.html">ai engineering</a>
+      <a href="https://lserra.github.io/tag/golang.html">golang</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'goodcombination';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy; 2026  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " lserra ",
+  "url" : "https://lserra.github.io",
+  "image": "/images/profile.png",
+  "description": "Ideias e reflexões sobre cloud, segurança, dados e inteligência artificial"
+}
+</script>
+
+
+</body>
+</html>
