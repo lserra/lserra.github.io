@@ -35,4 +35,4 @@ Vamos conversar sobre:
 
 - LGPD/GDPR e engenharia de dados
 
-- Oportunidades como Security Engineer, Cloud Security ou Data Protecion
+- Oportunidades como Security Engineer, Cloud Security ou Data Protection
