@@ -2,7 +2,7 @@ Title: Privacidade como Padrão
 Date: 2026-09-17 18:30
 Modified: 2026-09-17 18:30
 Category: Data Engineering, Data Security
-Slug: ai-golang
+Slug: default-data-privacy
 Summary: Este artigo mostra por que privacidade e segurança de dados não devem ser tratadas apenas depois de um vazamento ou como uma exigência burocrática. A proposta é explicar, de forma simples e realista, como ameaças, vulnerabilidades e decisões inadequadas sobre coleta, acesso, armazenamento e descarte podem se conectar e gerar impactos para pessoas e empresas.
 Tags: security information, data engineering, data security, cloud security, lgpd, data governance
 Authors: Laercio Serra
@@ -28,7 +28,7 @@ O risco não aparece somente quando um criminoso invade um sistema. Ele também 
 - Colocar informações pessoais em relatórios, planilhas ou registros técnicos sem necessidade.
 - Utilizar dados reais em ambientes de teste.
 
-O Instituto Nacional de Padrões e Tecnologia, conhecido como NIST, trata a privacidade como um risco que pode surgir durante todo o ciclo de vida dos dados: coleta, armazenamento, uso, compartilhamento, transformação, registro e descarte. [nvlpubs.nist](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf)
+O Instituto Nacional de Padrões e Tecnologia, conhecido como NIST, trata a privacidade como um risco que pode surgir durante todo o ciclo de vida dos dados: coleta, armazenamento, uso, compartilhamento, transformação, registro e descarte. ([nvlpubs.nist](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf))
 
 Isso é importante porque uma empresa pode ter um sistema tecnicamente protegido contra invasões e, ainda assim, causar um problema de privacidade por utilizar os dados de forma excessiva ou inadequada.
 
@@ -85,9 +85,9 @@ Na prática, isso envolve:
 - Oferecer explicações claras sobre o uso das informações.
 - Registrar as decisões relevantes para que possam ser revisadas.
 
-O NIST organiza esse tipo de trabalho em atividades como identificar riscos, estabelecer responsabilidades, controlar o uso dos dados, comunicar as práticas e proteger as informações. [nvlpubs.nist](https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf)
+O NIST organiza esse tipo de trabalho em atividades como identificar riscos, estabelecer responsabilidades, controlar o uso dos dados, comunicar as práticas e proteger as informações.
 
-O princípio também é reconhecido em orientações internacionais sobre proteção de dados desde a concepção e por padrão. A ideia central é incorporar as medidas de proteção ao projeto, em vez de tentar adicioná-las depois. [edpb.europa](https://www.edpb.europa.eu/documents/guideline/guidelines-42019-on-article-25-data-protection-by-design-and-by-default_en)
+O princípio também é reconhecido em orientações internacionais sobre proteção de dados desde a concepção e por padrão. A ideia central é incorporar as medidas de proteção ao projeto, em vez de tentar adicioná-las depois. ([edpb](https://www.edpb.europa.eu/documents/guideline/guidelines-42019-on-article-25-data-protection-by-design-and-by-default_en))
 
 ## Onde os problemas aparecem
 
