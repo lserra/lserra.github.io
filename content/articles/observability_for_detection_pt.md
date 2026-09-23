@@ -8,9 +8,7 @@ Tags: cybersecurity, data engineering, data security, insider threat, data obser
 Authors: Laercio Serra
 Status: published
 
-# Unindo Engenharia e Segurança de Dados na Detecção de Abuso Interno
-
-## O que deve ser observado
+# O que deve ser observado
 
 Uma boa análise começa pela coleta de três tipos de informação:
 
