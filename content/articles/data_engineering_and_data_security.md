@@ -4,7 +4,7 @@ Modified: 2026-09-23 18:30
 Category: Data Engineering, Data Security
 Slug: data-engineering-and-data-security
 Summary: Quando uma empresa coleta dados pessoais, ela assume uma responsabilidade. Isso inclui informações óbvias, como nome, CPF, telefone e endereço, mas também dados que podem revelar hábitos, localização, preferências, histórico de compras, comportamento profissional ou condições de saúde.
-Tags: security information, data engineering, data security, threat intel, lgpd, data governance
+Tags: security information, data engineering, data security, lgpd, data governance
 Authors: Laercio Serra
 Status: published
 
