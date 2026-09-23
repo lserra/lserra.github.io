@@ -1,4 +1,4 @@
-Title: Observabilidade para Detecção (Insider Threat)
+Title: Observabilidade de Dados para Detecção (Insider Threat)
 Date: 2026-09-24 18:30
 Modified: 2026-09-24 18:30
 Category: Data Engineering, Data Security
