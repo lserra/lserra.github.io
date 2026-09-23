@@ -1,0 +1,407 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="https://lserra.github.io/theme/pygments/monokai.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://lserra.github.io/theme/font-awesome/css/solid.css">
+
+
+    <link href="https://lserra.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="lserra Atom">
+
+
+
+  
+
+
+<meta name="author" content="Laercio Serra" />
+<meta name="description" content="Nem todo incidente de segurança começa com um ataque externo, um vírus ou uma senha roubada. Em muitos casos, o problema surge quando uma pessoa que já possui acesso legítimo usa esse acesso de forma indevida. Por isso, registros de acesso, números de uso e o caminho percorrido por cada solicitação devem ser tratados como ativos de segurança. Quando analisados em conjunto, eles ajudam a identificar comportamentos fora do padrão sem transformar qualquer atividade normal em um alerta. A proposta não é vigiar pessoas de forma indiscriminada. O objetivo é proteger dados sensíveis, entender o contexto de cada acesso e agir antes que uma extração indevida cause prejuízos." />
+<meta name="keywords" content="cybersecurity, data engineering, data security, insider threat, data observability">
+
+
+<meta property="og:site_name" content="lserra"/>
+<meta property="og:title" content="Observabilidade de Dados (Insider Threat)"/>
+<meta property="og:description" content="Nem todo incidente de segurança começa com um ataque externo, um vírus ou uma senha roubada. Em muitos casos, o problema surge quando uma pessoa que já possui acesso legítimo usa esse acesso de forma indevida. Por isso, registros de acesso, números de uso e o caminho percorrido por cada solicitação devem ser tratados como ativos de segurança. Quando analisados em conjunto, eles ajudam a identificar comportamentos fora do padrão sem transformar qualquer atividade normal em um alerta. A proposta não é vigiar pessoas de forma indiscriminada. O objetivo é proteger dados sensíveis, entender o contexto de cada acesso e agir antes que uma extração indevida cause prejuízos."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://lserra.github.io/2026/09/observability-for-detection-pt/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2026-09-24 18:30:00-03:00"/>
+<meta property="article:modified_time" content="2026-09-24 18:30:00-03:00"/>
+<meta property="article:author" content="https://lserra.github.io/author/laercio-serra.html">
+<meta property="article:section" content="Data Engineering, Data Security"/>
+<meta property="article:tag" content="cybersecurity"/>
+<meta property="article:tag" content="data engineering"/>
+<meta property="article:tag" content="data security"/>
+<meta property="article:tag" content="insider threat"/>
+<meta property="article:tag" content="data observability"/>
+<meta property="og:image" content="/images/profile.png">
+
+  <title>lserra &ndash; Observabilidade de Dados (Insider Threat)</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="https://lserra.github.io">
+        <img src="/images/profile.png" alt="terresact.ai" title="terresact.ai">
+      </a>
+
+      <h1>
+        <a href="https://lserra.github.io">terresact.ai</a>
+      </h1>
+
+<p>Cloud, Security, Data and AI</p>
+
+      <nav>
+        <ul class="list">
+
+
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/about-me/#about-me">
+                  Sobre mim
+                </a>
+              </li>
+              <li>
+                <a target="_self"
+                   href="https://lserra.github.io/contact/#contact">
+                  Contato
+                </a>
+              </li>
+
+            <li>
+              <a target="_self" href="https://lserra.github.io" >ideias e reflexoes</a>
+            </li>
+            <li>
+              <a target="_self" href="https://lserra.github.io" >portfolio</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-github" href="https://github.com/lserra" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/laerciosserra/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-x" href="https://x.com/laercio_serra" target="_blank">
+              <i class="fab fa-x"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://lserra.github.io">Home</a>
+
+      <a href="/archives">Arquivos</a>
+      <a href="/categories">Categorias</a>
+      <a href="/tags">Tags</a>
+
+      <a href="https://lserra.github.io/feeds/all.atom.xml">Atom</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="observability-for-detection-pt">Observabilidade de Dados (Insider Threat)</h1>
+    <p>
+      Posted on Thu 24 September 2026 in <a href="https://lserra.github.io/category/data-engineering-data-security.html">Data Engineering, Data Security</a>
+
+        &#8226; 7 min read
+    </p>
+  </header>
+
+
+  <div>
+    <h1>O que deve ser observado</h1>
+<p>Uma boa análise começa pela coleta de três tipos de informação:</p>
+<table>
+<thead>
+<tr>
+<th>Informação</th>
+<th>O que mostra</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Registros</td>
+<td>Quem fez algo, quando e onde</td>
+<td>Usuário consultou dados de clientes às 23h</td>
+</tr>
+<tr>
+<td>Números de uso</td>
+<td>Quanto foi acessado ou transferido</td>
+<td>20 GB exportados em uma hora</td>
+</tr>
+<tr>
+<td>Caminho da operação</td>
+<td>Como a ação aconteceu</td>
+<td>Painel de BI, API, banco de dados e arquivo exportado</td>
+</tr>
+</tbody>
+</table>
+<p>Os registros ajudam a responder perguntas básicas:</p>
+<ul>
+<li>Qual usuário realizou a consulta?</li>
+<li>Qual aplicação foi usada?</li>
+<li>Quais tabelas ou arquivos foram acessados?</li>
+<li>O acesso ocorreu a partir de qual dispositivo ou endereço de rede?</li>
+<li>Houve download, exportação ou cópia?</li>
+<li>O usuário tinha uma tarefa que justificasse aquela ação?</li>
+</ul>
+<p>Os números de uso mostram mudanças que podem passar despercebidas em uma análise manual:</p>
+<ul>
+<li>Aumento repentino no número de consultas.</li>
+<li>Acesso a uma quantidade incomum de clientes ou documentos.</li>
+<li>Exportação de arquivos muito maiores que o normal.</li>
+<li>Transferência de dados para um destino nunca utilizado.</li>
+<li>Repetição de consultas semelhantes em curto período.</li>
+</ul>
+<p>Já o caminho da operação mostra a sequência completa. Por exemplo: um usuário acessa um painel, o painel consulta o banco, uma API prepara os dados e, em seguida, um arquivo é gerado para download. Essa visão é mais útil do que analisar cada evento separadamente.</p>
+<h2>Como identificar desvios</h2>
+<p>O primeiro passo é conhecer o comportamento normal de cada função. Um analista financeiro, por exemplo, pode consultar dados de vendas durante o horário comercial e exportar pequenos relatórios. Um administrador de banco pode acessar muitas tabelas, mas normalmente trabalha com ferramentas e horários conhecidos.</p>
+<p>O comportamento esperado deve ser definido por função, aplicação e tipo de dado. Comparar todos os usuários com a mesma regra costuma gerar muitos alertas sem importância.</p>
+<p>Uma forma simples de análise é combinar sinais:</p>
+<table>
+<thead>
+<tr>
+<th>Sinal observado</th>
+<th>Exemplo</th>
+<th>Importância</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consulta fora do padrão</td>
+<td>Acesso a uma tabela nunca usada pelo usuário</td>
+<td>Média</td>
+</tr>
+<tr>
+<td>Horário incomum</td>
+<td>Acesso durante a madrugada</td>
+<td>Baixa ou média</td>
+</tr>
+<tr>
+<td>Grande quantidade de dados</td>
+<td>Exportação de milhões de registros</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Novo dispositivo</td>
+<td>Acesso por equipamento não registrado</td>
+<td>Média</td>
+</tr>
+<tr>
+<td>Acesso a dado sensível</td>
+<td>Consulta a salário, saúde ou dados bancários</td>
+<td>Alta</td>
+</tr>
+<tr>
+<td>Mudança de permissão</td>
+<td>Usuário recebeu acesso pouco antes da consulta</td>
+<td>Alta</td>
+</tr>
+</tbody>
+</table>
+<p>Nenhum desses sinais, sozinho, prova que existe abuso. Um acesso fora do horário pode ocorrer por causa de uma emergência. Uma grande exportação pode fazer parte de uma tarefa autorizada. O risco aumenta quando vários sinais aparecem juntos.</p>
+<p>Por exemplo, uma consulta fora do horário pode receber baixa prioridade. Porém, se o mesmo usuário também acessar dados sensíveis, usar um dispositivo desconhecido e exportar grande volume de informações, o caso merece investigação.</p>
+<p>Essa combinação reduz o excesso de alertas e direciona a equipe para situações que realmente precisam de atenção.</p>
+<h2>Um caso prático</h2>
+<p>Um exemplo que ocorreu recentemente. Um funcionário acessou, sem justificativa profissional, informações de milhares de clientes durante um período prolongado. Foi identificado, que foram realizadas mais de 6.600 consultas envolvendo cerca de 3.573 clientes entre 2022 e 2024. Após auditoria interna, descobriu-se que o funcionário estava exfiltrando estas informações.</p>
+<p>Esse caso mostra que o abuso interno nem sempre aparece como uma grande cópia de dados em poucos minutos. Ele também pode ocorrer por meio de muitas consultas menores, repetidas ao longo do tempo.</p>
+<p>Se a organização observasse apenas o volume diário de dados, talvez cada consulta parecesse normal. Uma análise mais completa poderia considerar:</p>
+<ul>
+<li>A quantidade de clientes consultados.</li>
+<li>A relação entre esses clientes e a função do funcionário.</li>
+<li>A repetição de consultas fora da necessidade de trabalho.</li>
+<li>O acesso a pessoas ligadas ao funcionário.</li>
+<li>A frequência e a duração do comportamento.</li>
+<li>A existência ou não de uma tarefa registrada para justificar os acessos.</li>
+</ul>
+<p>Outro caso, também recente, envolveu um funcionário de uma empresa de tecnologia que tinha acesso administrativo aos ambientes da AWS e do GitHub. Este mesmo colaborador baixou gigabytes de arquivos confidenciais e alterou configurações relacionadas à retenção dos registros para esconder sua atividade.</p>
+<p>Esses dois episódios reforçam bem a importância de proteger os próprios registros. Se uma pessoa com acesso administrativo puder apagar ou alterar os registros, a organização perde uma das principais fontes de evidência.</p>
+<p>Por isso, os registros devem ser enviados para um local separado, com acesso limitado e retenção protegida contra alterações. O responsável pelo ambiente não deve ser capaz de apagar sozinho os sinais da própria atividade.</p>
+<h2>Como aplicar na prática</h2>
+<p>Uma implantação eficiente pode ser feita em etapas.</p>
+<h3>1. Escolha os dados mais importantes</h3>
+<p>Comece por informações que causariam maior prejuízo se fossem expostas:</p>
+<ul>
+<li>Dados pessoais de clientes.</li>
+<li>Informações financeiras.</li>
+<li>Segredos comerciais.</li>
+<li>Código-fonte.</li>
+<li>Credenciais e chaves de acesso.</li>
+<li>Dados de funcionários.</li>
+<li>Relatórios estratégicos.</li>
+</ul>
+<p>Não é necessário monitorar tudo com o mesmo nível de detalhe desde o início.</p>
+<h3>2. Registre as ações principais</h3>
+<p>Para cada acesso importante, registre:</p>
+<ul>
+<li>Usuário ou conta utilizada.</li>
+<li>Data e horário.</li>
+<li>Sistema de origem.</li>
+<li>Aplicação usada.</li>
+<li>Tipo de dado acessado.</li>
+<li>Quantidade de registros consultados.</li>
+<li>Tamanho do arquivo exportado.</li>
+<li>Destino do download.</li>
+<li>Resultado da operação.</li>
+</ul>
+<p>O registro deve evitar guardar o conteúdo completo dos dados. Na maioria dos casos, basta registrar o tipo de informação, a quantidade e o identificador da operação. Isso reduz riscos adicionais e facilita o respeito às regras internas de privacidade.</p>
+<h3>3. Crie uma referência de comportamento normal</h3>
+<p>Observe o ambiente por algumas semanas e estabeleça uma referência para cada grupo de usuários. Essa referência pode considerar:</p>
+<ul>
+<li>Horário habitual de trabalho.</li>
+<li>Sistemas normalmente utilizados.</li>
+<li>Volume médio de consultas.</li>
+<li>Tabelas e arquivos acessados com frequência.</li>
+<li>Local ou dispositivo normalmente utilizado.</li>
+<li>Quantidade usual de exportações.</li>
+</ul>
+<p>A referência precisa ser atualizada. Mudanças de projeto, plantões e períodos de fechamento financeiro podem alterar o comportamento normal.</p>
+<h3>4. Combine os sinais</h3>
+<p>Em vez de criar um alerta para cada evento, atribua maior prioridade quando vários sinais ocorrerem próximos no tempo.</p>
+<p>Um exemplo:</p>
+<ul>
+<li>Consulta a dados sensíveis: 3 pontos.</li>
+<li>Volume muito acima da média: 3 pontos.</li>
+<li>Dispositivo desconhecido: 2 pontos.</li>
+<li>Exportação para destino novo: 2 pontos.</li>
+<li>Horário incomum: 1 ponto.</li>
+<li>Mudança recente de permissão: 3 pontos.</li>
+</ul>
+<p>Uma ocorrência com poucos pontos pode apenas ser registrada. Uma ocorrência com pontuação elevada pode gerar uma investigação. Esses valores são apenas um exemplo e devem ser ajustados ao perfil da organização.</p>
+<p>O horário fora do expediente não deve ser usado como prova isolada. Pesquisas do MITRE recomendam cautela com esse tipo de indicador, pois trabalhar fora do horário normal pode ser comum em determinadas funções.</p>
+<h3>5. Valide antes de tomar uma medida</h3>
+<p>O sistema deve indicar que existe um comportamento incomum, mas a decisão final deve considerar o contexto.</p>
+<p>Antes de bloquear uma conta ou acusar um funcionário, a equipe deve verificar:</p>
+<ul>
+<li>Existe uma solicitação de trabalho relacionada?</li>
+<li>O acesso foi autorizado pelo gestor?</li>
+<li>O usuário estava em plantão?</li>
+<li>O sistema executou uma tarefa automática?</li>
+<li>O arquivo exportado contém realmente dados sensíveis?</li>
+<li>Houve transferência para fora da empresa?</li>
+<li>O mesmo comportamento ocorre com outras pessoas da mesma função?</li>
+</ul>
+<p>Em situações de baixo risco, pode ser suficiente solicitar uma justificativa ou acompanhar a atividade. Em casos mais graves, a organização pode limitar temporariamente o acesso, preservar os registros e iniciar o processo interno de resposta.</p>
+<p>A CISA organiza a gestão de risco interno em quatro etapas: definir o risco, detectar e identificar sinais, avaliar o caso e administrar a resposta. Essa abordagem ajuda a evitar decisões precipitadas baseadas em um único evento.</p>
+<h2>Como reduzir o excesso de alertas</h2>
+<p>O excesso de alertas é um dos maiores problemas em qualquer equipe de segurança. Quando tudo parece urgente, os casos importantes podem ser ignorados.</p>
+<p>Algumas práticas ajudam a manter o controle:</p>
+<ul>
+<li>Criar regras diferentes para cada função.</li>
+<li>Priorizar dados sensíveis e ações de exportação.</li>
+<li>Usar períodos de comparação, em vez de limites fixos.</li>
+<li>Agrupar eventos do mesmo usuário em uma única ocorrência.</li>
+<li>Ignorar tarefas automáticas já conhecidas.</li>
+<li>Permitir que equipes registrem mudanças planejadas.</li>
+<li>Revisar as regras após cada investigação.</li>
+<li>Separar alerta informativo de alerta que exige ação imediata.</li>
+</ul>
+<p>Também é importante evitar uma abordagem baseada em desconfiança. O objetivo não deve ser criar um histórico detalhado da vida profissional de cada pessoa, mas detectar ações que possam colocar dados e sistemas em risco.</p>
+<p>Uma regra simples pode ser:</p>
+<blockquote>
+<p>Quanto mais sensível for o dado e mais distante for a ação do comportamento esperado, maior deve ser a prioridade da análise.</p>
+</blockquote>
+<h2>Conclusão</h2>
+<p>A observabilidade pode cumprir uma função muito maior do que medir desempenho. Quando registros, números de uso e caminhos das operações são analisados em conjunto, eles se tornam uma camada importante de proteção contra abuso interno.</p>
+<p>O principal aprendizado dos casos reais é que o risco pode aparecer de formas diferentes: consultas pequenas repetidas ao longo de meses, uma exportação extensa em poucos minutos ou a tentativa de apagar os próprios registros.</p>
+<p>A melhor estratégia é combinar contexto, proteção dos registros e análise gradual. Dessa forma, a organização consegue encontrar sinais relevantes sem interromper o trabalho normal nem transformar cada comportamento diferente em uma acusação.</p>
+<p>Para empresas que trabalham com grandes volumes de dados, essa integração entre engenharia de dados e segurança representa uma oportunidade prática: os mesmos dados usados para melhorar sistemas também podem ajudar a proteger clientes, funcionários e o próprio negócio.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://lserra.github.io/tag/cybersecurity.html">cybersecurity</a>
+      <a href="https://lserra.github.io/tag/data-engineering.html">data engineering</a>
+      <a href="https://lserra.github.io/tag/data-security.html">data security</a>
+      <a href="https://lserra.github.io/tag/insider-threat.html">insider threat</a>
+      <a href="https://lserra.github.io/tag/data-observability.html">data observability</a>
+    </p>
+  </div>
+
+
+
+
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'goodcombination';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view comments.
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>
+  &copy; 2026  - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " lserra ",
+  "url" : "https://lserra.github.io",
+  "image": "/images/profile.png",
+  "description": "Ideias e reflexões sobre cloud, segurança, dados e inteligência artificial"
+}
+</script>
+
+
+</body>
+</html>
