@@ -4,7 +4,7 @@ Modified: 2026-09-24 18:30
 Category: Data Engineering, Data Security
 Slug: observability-for-detection-pt
 Summary: Nem todo incidente de segurança começa com um ataque externo, um vírus ou uma senha roubada. Em muitos casos, o problema surge quando uma pessoa que já possui acesso legítimo usa esse acesso de forma indevida. Por isso, registros de acesso, números de uso e o caminho percorrido por cada solicitação devem ser tratados como ativos de segurança. Quando analisados em conjunto, eles ajudam a identificar comportamentos fora do padrão sem transformar qualquer atividade normal em um alerta. A proposta não é vigiar pessoas de forma indiscriminada. O objetivo é proteger dados sensíveis, entender o contexto de cada acesso e agir antes que uma extração indevida cause prejuízos.
-Tags: cybersecurity, dataengineering, datasecurity, insiderthreat, dataobservability
+Tags: cybersecurity, data engineering, data security, insider threat, data observability
 Authors: Laercio Serra
 Status: published
 
