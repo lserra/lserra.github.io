@@ -3,7 +3,7 @@ Date: 2020-05-17 00:00
 Modified: 2026-09-10 00:00
 Slug: about-me
 
-Sou um **Security Engineer** focado em unir engenharia de dados e segurança da informação para construir **plataformas escaláveis, seguras e compliant by design**.
+Sou um **Data Engineer** focado em unir engenharia de dados e segurança da informação para construir **plataformas escaláveis, seguras e compliant by design**.
 
 Minha jornada começou na engenharia de dados, onde passei 20+ anos projetando pipelines de ETL, analytics em tempo real e infraestrutura cloud (GCP/AWS). Com o tempo, percebi que segurança não podia ser uma reflexão tardia — precisava estar no core do design.
 
@@ -23,16 +23,16 @@ Projetos recentes:
 
 - SIEM Lab com Wazuh + Elastic Stack
 
-- Pipeline de logs com detecção de anomalias em Go
+- [Observabilidade para Detecção de Abuso Interno](https://github.com/lserra/insider-threat-lab)
 
 - Data tagging no BigQuery para LGPD
 
 Vamos conversar sobre:
 
-- Segurança em plataformas de dados
+- Engenharia e Segurança em plataformas de dados
 
-- Cloud Security (GCP/AWS)
+- LGPD/GDPR e governança de dados
 
-- LGPD/GDPR e engenharia de dados
+- Cloud (GCP/AWS)
 
-- Oportunidades como Security Engineer, Cloud Security ou Data Protection
+- Oportunidades como Data Security ou Data Protection
