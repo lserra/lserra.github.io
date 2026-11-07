@@ -44,5 +44,5 @@ ghp-import==2.1.0
 # ─────────────────────────────────────────────
 # Remote/SSH Deployment (opcional)
 # ─────────────────────────────────────────────
-paramiko==4.0.0
+paramiko==5.0.0
 cryptography
